@@ -7,8 +7,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171" fx:controller="application.boundary.MainPage">
+<AnchorPane xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.boundary.MainPage">
    <children>
       <VBox prefHeight="400.0" prefWidth="640.0">
         <children>
@@ -24,7 +23,7 @@
                         <Font name="System Bold" size="25.0" />
                      </font>
                   </Label>
-                  <Button fx:id="EffettuaLoginButton" layoutX="260.0" layoutY="268.0" mnemonicParsing="false" onAction="#EffettuaLoginButtonControll" style="-fx-background-color: FFCC66;" stylesheets="@MainPage.fxml" text="Effettua Login">
+                  <Button fx:id="MakeLoginButton" layoutX="260.0" layoutY="268.0" mnemonicParsing="false" onAction="#LoginButtonControl" style="-fx-background-color: FFCC66;" stylesheets="@MainPage.fxml" text="Effettua Login">
                      <font>
                         <Font name="System Bold Italic" size="15.0" />
                      </font>

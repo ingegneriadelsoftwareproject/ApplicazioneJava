@@ -15,12 +15,12 @@ public class Main extends Application {
 			FXMLLoader loader = new FXMLLoader(); 
 			loader.setLocation(getClass().getResource("../fxml/MainPage.fxml")); 
 			Parent root = loader.load(); 
-			Scene scene = new Scene(root);
+			Scene scene = new Scene(root, 600,350);
 			primaryStage.setScene(scene);
+			primaryStage.setTitle("MainPage"); 
 			primaryStage.show();
 		} catch(Exception e) {
 			e.printStackTrace();
-			//System.out.println("Qui"); 
 		}
 	}
 	
