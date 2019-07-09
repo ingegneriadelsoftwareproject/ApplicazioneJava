@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.boundary.LoggedMainPage">
+   <children>
+      <VBox prefHeight="400.0" prefWidth="640.0">
+        <children>
+          <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="320.0" prefWidth="640.0" VBox.vgrow="ALWAYS">
+               <children>
+                  <Label layoutX="95.0" layoutY="49.0" text="EC-17 Manager" textFill="#360ad3" AnchorPane.bottomAnchor="331.0" AnchorPane.leftAnchor="73.0" AnchorPane.rightAnchor="387.0" AnchorPane.topAnchor="33.0">
+                     <font>
+                        <Font name="System Bold" size="25.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="findUserButton" layoutX="73.0" layoutY="131.0" mnemonicParsing="false" onAction="#findUserButtonControl" style="-fx-background-color: #ffcc66;" text="Cerca Utente">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="viewProductStatics" layoutX="73.0" layoutY="227.0" mnemonicParsing="false" onAction="#viewProductStaticsControl" style="-fx-background-color: #ffcc66;" text="Visualizza statistiche su prodotti">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Button>
+                  <Text layoutX="328.0" layoutY="113.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bentornato @">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Text>
+                  <Label fx:id="usernameLabel" layoutX="456.0" layoutY="97.0" prefHeight="17.0" prefWidth="144.0" />
+                  <Text layoutX="328.0" layoutY="155.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Da qui puoi gestire i clienti, e visualizzare  ">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="328.0" layoutY="183.0" strokeType="OUTSIDE" strokeWidth="0.0" text=" alcune statistiche sui prodotti ">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Text>
+                  <Hyperlink fx:id="logoutLabel" layoutX="535.0" layoutY="40.0" onAction="#logoutLabelControl" text="Logout" textFill="#e80d0d" underline="true">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Hyperlink>
+               </children>
+          </AnchorPane>
+        </children>
+      </VBox>
+   </children>
+</AnchorPane>

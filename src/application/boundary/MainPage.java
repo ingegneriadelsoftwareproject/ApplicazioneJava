@@ -11,9 +11,12 @@ public class MainPage {
 
     @FXML
     void loginButtonControl(ActionEvent event) {
-    	/*LoginPage p = new LoginPage(); 
+    	//per provare LoginPage
+    	LoginPage p = new LoginPage(); 
     	p.showLoginPage(event);
-		*/
+		
+    
+
     }
 
 }

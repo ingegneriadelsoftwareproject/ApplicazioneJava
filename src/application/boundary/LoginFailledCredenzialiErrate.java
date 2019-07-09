@@ -9,25 +9,27 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.stage.Stage;
 
-public class LoginFailledNoCredenziali {
+public class LoginFailledCredenzialiErrate {
 
     @FXML
     private Button okButton;
 
     @FXML
     void okButtonControl(ActionEvent event) {
+    	
     	((Node)(event.getSource())).getScene().getWindow().hide();
 
     }
-    public void showLoginFailledNoCredenziali(ActionEvent event) {
-     	try {
+    
+    public void showLoginFailledCredenzialiErrate(ActionEvent event) {
+    	try {
 			FXMLLoader loader = new FXMLLoader(); 
-			loader.setLocation(getClass().getResource("../fxml/LoginFailledNoCredenziali.fxml"));
+			loader.setLocation(getClass().getResource("../fxml/LoginFailledCredenzialiErrate.fxml"));
 			Parent root = loader.load();
 			Scene scene = new Scene(root);
 			Stage s = new Stage();
 			s.setScene(scene);
-			s.setTitle("Campi vuoti!");
+			s.setTitle("Credenziali errate !");
 			s.show();
 		
 			

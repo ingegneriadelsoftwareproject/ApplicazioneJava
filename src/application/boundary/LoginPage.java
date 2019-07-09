@@ -23,10 +23,7 @@ public class LoginPage {
 
     @FXML
     void loginButtonControl(ActionEvent event) {
-    	/*
-    	LoginFailledNoCredenziali l = new LoginFailledNoCredenziali(); 
-    	l.showLoginFailledNoCredenziali(event);
-		*/
+   
     }
     
     public void showLoginPage(ActionEvent event) {
@@ -37,6 +34,7 @@ public class LoginPage {
 			Scene scene = new Scene(root);
 			Stage s = new Stage();
 			s.setScene(scene);
+			s.setTitle("Login Page");
 			s.show();
 			((Node)(event.getSource())).getScene().getWindow().hide();
 			
