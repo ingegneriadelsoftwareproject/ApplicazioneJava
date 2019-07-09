@@ -7,13 +7,13 @@ import javafx.scene.control.Button;
 public class MainPage {
 
     @FXML
-    private Button MakeLoginButton;
+    private Button makeLoginButton;
 
     @FXML
-    void LoginButtonControl(ActionEvent event) {
-
+    void loginButtonControl(ActionEvent event) {
+    	/*LoginPage p = new LoginPage(); 
+    	p.showLoginPage(event);
+		*/
     }
-    
-  
 
 }
