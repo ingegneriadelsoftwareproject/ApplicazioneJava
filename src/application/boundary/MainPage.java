@@ -1,8 +1,10 @@
 package application.boundary;
-
+import java.util.Locale;
+import application.entity.User;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+
 
 public class MainPage {
 
@@ -10,13 +12,12 @@ public class MainPage {
     private Button makeLoginButton;
 
     @FXML
-    void loginButtonControl(ActionEvent event) {
-    	//per provare LoginPage
-    	LoginPage p = new LoginPage(); 
-    	p.showLoginPage(event);
-		
+    void loginButtonControl(ActionEvent event){
+    	//per provare la userListPage
+    	UserListPage p = new UserListPage(); 
+    	p.showUserListPage(event);
+        
     
-
     }
 
 }

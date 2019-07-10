@@ -23,7 +23,7 @@ public class LoginPage {
 
     @FXML
     void loginButtonControl(ActionEvent event) {
-   
+    	
     }
     
     public void showLoginPage(ActionEvent event) {

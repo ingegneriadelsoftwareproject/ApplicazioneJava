@@ -34,7 +34,10 @@
                         <Font size="18.0" />
                      </font>
                   </Text>
-                  <Label fx:id="usernameLabel" layoutX="456.0" layoutY="97.0" prefHeight="17.0" prefWidth="144.0" />
+                  <Label fx:id="usernameLabel" layoutX="449.0" layoutY="92.0" prefHeight="17.0" prefWidth="144.0">
+                     <font>
+                        <Font size="18.0" />
+                     </font></Label>
                   <Text layoutX="328.0" layoutY="155.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Da qui puoi gestire i clienti, e visualizzare  ">
                      <font>
                         <Font size="18.0" />

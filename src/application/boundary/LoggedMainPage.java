@@ -1,5 +1,11 @@
 package application.boundary;
 
+import java.text.DateFormat;
+import java.text.ParseException;
+import java.util.LinkedList;
+import java.util.Locale;
+
+import application.entity.User;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -25,8 +31,8 @@ public class LoggedMainPage {
     private Hyperlink logoutLabel;
 
     @FXML
-    void findUserButtonControl(ActionEvent event) {
-
+    void findUserButtonControl(ActionEvent event) throws ParseException {
+    	
     }
 
     @FXML
@@ -39,7 +45,7 @@ public class LoggedMainPage {
 
     }
     
-    public void showLoggedMainPage(ActionEvent event) {
+    public void showLoggedMainPage(ActionEvent event, String userName) {
     
       	try {
       			
@@ -50,6 +56,8 @@ public class LoggedMainPage {
     			Stage s = new Stage();
     			s.setScene(scene);
     			s.setTitle("Logged Main Page");
+    			LoggedMainPage l = loader.<LoggedMainPage>getController(); 
+    			l.initData(userName);
     			s.show();
     		
     			
@@ -58,6 +66,10 @@ public class LoggedMainPage {
     			e.printStackTrace();
     		}
     	
+    }
+    
+    void initData (String nome ) {
+    	this.usernameLabel.setText(nome);
     }
     @FXML
     void initialize() {
