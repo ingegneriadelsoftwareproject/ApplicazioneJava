@@ -1,7 +1,6 @@
 package application.boundary;
 
 import java.net.URL;
-import java.util.LinkedList;
 import java.util.ResourceBundle;
 
 import application.entity.User;
@@ -10,41 +9,35 @@ import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 
-public class UserListPage {
+public class UserListPage implements Initializable {
 
     @FXML
     private ResourceBundle resources;
 
     @FXML
     private URL location;
-    
+
     @FXML
     private TableView<User> userTable;
 
     @FXML
-    private TableColumn <User,String> nomeColumn;
+    private TableColumn<User, String> nameColumn;
 
     @FXML
-    private TableColumn <User,String> cognomeColumn;
-
-    //@FXML
-   // private TableColumn bithDateColumn;
+    private TableColumn<User, String> surnameColumn;
 
     @FXML
-    private TableColumn <User,String> mailColumn;
-
-    //@FXML
-    //private TableColumn usernameColumn;
+    private TableColumn<User, String> emailColumn;
 
     @FXML
     private Button backButton;
@@ -53,36 +46,17 @@ public class UserListPage {
     void backButtonControl(ActionEvent event) {
 
     }
-    /*
-    public void setTable() {
-    	
-    	userTable = new TableView<User>();
-    	nomeColumn = new TableColumn<User,String>("name"); 
-    	cognomeColumn = new TableColumn<User,String>("surname");
-    	mailColumn = new TableColumn<User,String>("email");
-    	nomeColumn.setCellValueFactory(new PropertyValueFactory<>("name"));
-    	cognomeColumn.setCellValueFactory(new PropertyValueFactory<>("surname"));
-    	mailColumn.setCellValueFactory(new PropertyValueFactory<>("email"));
-    	userTable.getColumns().addAll(nomeColumn, cognomeColumn,mailColumn); 
-    	
-        ObservableList<User> values = FXCollections.
-                observableArrayList();
-        values.add(new User("Laura", "Verdi", "LauraVerdi@hotmail.it"));
-        values.add(new User("Mario", "Rossi", "Mariorossi@gmail.com"));
-        userTable.setColumnResizePolicy(TableView.CONSTRAINED_RESIZE_POLICY);
-        userTable.setItems(values);
-        userTable.setVisible(true);
-
-    }*/
+    
     public void showUserListPage(ActionEvent event) {
-    	try {
+     	try {
 			FXMLLoader loader = new FXMLLoader(); 
 			loader.setLocation(getClass().getResource("../fxml/UserListPage.fxml"));
 			Parent root = loader.load();
 			Scene scene = new Scene(root);
 			Stage s = new Stage();
 			s.setScene(scene);
-			s.setTitle("User List Page");
+			s.setTitle("Login Page");
+			
 			s.show();
 			((Node)(event.getSource())).getScene().getWindow().hide();
 			
@@ -91,31 +65,23 @@ public class UserListPage {
 			e.printStackTrace();
 		}
     }
-    @FXML
-    void initialize() {
-        assert userTable != null : "fx:id=\"userTable\" was not injected: check your FXML file 'UserListPage.fxml'.";
-        assert nomeColumn != null : "fx:id=\"nomeColumn\" was not injected: check your FXML file 'UserListPage.fxml'.";
-        assert cognomeColumn != null : "fx:id=\"cognomeColumn\" was not injected: check your FXML file 'UserListPage.fxml'.";
-        assert mailColumn != null : "fx:id=\"mailColumn\" was not injected: check your FXML file 'UserListPage.fxml'.";
-        assert backButton != null : "fx:id=\"backButton\" was not injected: check your FXML file 'UserListPage.fxml'.";
-    	userTable = new TableView<User>();
-    	nomeColumn = new TableColumn<User,String>("name"); 
-    	cognomeColumn = new TableColumn<User,String>("surname");
-    	mailColumn = new TableColumn<User,String>("email");
-    	nomeColumn.setCellValueFactory(new PropertyValueFactory<User,String>("name"));
-    	cognomeColumn.setCellValueFactory(new PropertyValueFactory<User,String>("surname"));
-    	mailColumn.setCellValueFactory(new PropertyValueFactory<User,String>("email"));
-    	userTable.getColumns().addAll(nomeColumn, cognomeColumn,mailColumn); 
-    	
-        ObservableList<User> values = FXCollections.
-                observableArrayList();
-        values.add(new User("Laura", "Verdi", "LauraVerdi@hotmail.it"));
-        values.add(new User("Mario", "Rossi", "Mariorossi@gmail.com"));
-        userTable.setColumnResizePolicy(TableView.CONSTRAINED_RESIZE_POLICY);
-        userTable.setItems(values);
 
-    }
 
- 
+	
+	public ObservableList<User> getUser(){
+		ObservableList<User> l = FXCollections.observableArrayList(); 
+		l.add(new User("Luigi", "Napolitano", "luigi.napolitano@hotmail.it")); 
+		l.add(new User("Grazia", "Napolitano", "gr.napolitano@hotmail.i")); 
+		return l; 
+	}
+
+	@Override
+	public void initialize(URL location, ResourceBundle resources) {
+		// TODO Auto-generated method stub
+		nameColumn.setCellValueFactory(new PropertyValueFactory<User,String>("name"));
+		surnameColumn.setCellValueFactory(new PropertyValueFactory<User,String>("surname"));
+		emailColumn.setCellValueFactory(new PropertyValueFactory<User,String>("email"));
+		userTable.setItems(getUser());
+		
+	}
 }
-
