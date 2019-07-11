@@ -47,6 +47,7 @@ public class FindUserPage {
     void findButtonControl(ActionEvent event) {
 
     }
+    //aggiungere metodo read per la lettura dei filtri 
     
     public void showFindUserPage(ActionEvent event) {
      	try {

@@ -14,7 +14,7 @@
         <children>
           <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="401.0" prefWidth="702.0" VBox.vgrow="ALWAYS">
                <children>
-                  <Text layoutX="14.0" layoutY="23.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Utenti trovati in base ai criteri di scelta, cliccare sull'username dell'utente per visualizzare i dettagli" wrappingWidth="296.13671875">
+                  <Text layoutX="14.0" layoutY="23.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Utenti trovati in base ai criteri inseriti, cliccare su una riga della colonna per visualizzare i dettagli dell'utente" wrappingWidth="296.13671875">
                      <font>
                         <Font name="System Bold Italic" size="15.0" />
                      </font>
@@ -29,11 +29,13 @@
                         <Font name="System Bold Italic" size="15.0" />
                      </font>
                   </Text>
-                  <TableView fx:id="userTable" layoutX="1.0" layoutY="70.0" prefHeight="246.0" prefWidth="640.0">
+                  <TableView fx:id="userTable" layoutX="1.0" layoutY="70.0" onMouseClicked="#userClicckedControl" prefHeight="246.0" prefWidth="640.0">
                     <columns>
-                      <TableColumn fx:id="nameColumn" prefWidth="75.0" text="name" />
-                      <TableColumn fx:id="surnameColumn" prefWidth="75.0" text="surname" />
-                        <TableColumn fx:id="emailColumn" prefWidth="75.0" text="email" />
+                      <TableColumn fx:id="nameColumn" prefWidth="75.0" text="nome" />
+                      <TableColumn fx:id="surnameColumn" prefWidth="123.0" text="cognome" />
+                        <TableColumn fx:id="emailColumn" prefWidth="203.0" text="email" />
+                        <TableColumn fx:id="birthColumn" prefWidth="98.0" text="Data di Nascita" />
+                        <TableColumn fx:id="usernameColumn" prefWidth="134.0" text="Username" />
                     </columns>
                   </TableView>
                </children>

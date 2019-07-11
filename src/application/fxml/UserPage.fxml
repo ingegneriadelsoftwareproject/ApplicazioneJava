@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.boundary.UserPage">
+   <children>
+      <VBox prefHeight="400.0" prefWidth="640.0">
+        <children>
+          <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="454.0" prefWidth="640.0" VBox.vgrow="ALWAYS">
+               <children>
+                  <Label layoutX="220.0" layoutY="132.0" prefHeight="27.0" prefWidth="113.0" text="Usename">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="38.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../img/user.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="220.0" layoutY="172.0" text="Data di Nascita">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="220.0" layoutY="211.0" text="e-mail">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="usernameLabel" layoutX="355.0" layoutY="132.0" prefHeight="17.0" prefWidth="113.0" text="Label">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="birthDateLabel" layoutX="355.0" layoutY="172.0" prefHeight="17.0" prefWidth="113.0" text="Label">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="emailLabel" layoutX="355.0" layoutY="211.0" prefHeight="17.0" prefWidth="250.0" text="Label">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="nameLabel" layoutX="233.0" layoutY="70.0" text="Label">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="surnameLabel" layoutX="412.0" layoutY="70.0" text="Label">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="deleteButton" layoutX="226.0" layoutY="269.0" mnemonicParsing="false" onAction="#deleteButtonControl" style="-fx-background-color: #ffcc66;" text="Cancella Utente">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="viewStaticsButton" layoutX="178.0" layoutY="327.0" mnemonicParsing="false" onAction="#viewStaticsButtonControl" style="-fx-background-color: #ffcc66;" text="Visualizza Statistiche Utente">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Button>
+               </children>
+          </AnchorPane>
+        </children>
+      </VBox>
+   </children>
+</AnchorPane>

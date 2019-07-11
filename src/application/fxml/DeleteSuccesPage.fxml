@@ -8,34 +8,34 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="245.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.boundary.LoginOkPage">
+<AnchorPane xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.boundary.DeleteSuccesPage">
    <children>
-      <VBox layoutY="8.0" prefHeight="173.0" prefWidth="640.0">
+      <VBox prefHeight="173.0" prefWidth="640.0">
         <children>
-            <AnchorPane prefHeight="231.0" prefWidth="640.0">
+          <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="174.0" prefWidth="640.0">
                <children>
-                  <ImageView fitHeight="130.0" fitWidth="140.0" layoutX="23.0" layoutY="51.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="77.0" AnchorPane.leftAnchor="58.0" AnchorPane.rightAnchor="412.0" AnchorPane.topAnchor="52.0">
+                  <ImageView fitHeight="130.0" fitWidth="140.0" layoutX="56.0" layoutY="88.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="77.0" AnchorPane.leftAnchor="58.0" AnchorPane.rightAnchor="412.0" AnchorPane.topAnchor="52.0">
                      <image>
                         <Image url="@../../../img/depositphotos_208355692-stock-illustration-check-mark-valid-seal-icon.jpg" />
                      </image>
                   </ImageView>
-                  <Text layoutX="257.0" layoutY="71.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Login Effettuato con successo !" wrappingWidth="282.0">
+                  <Text layoutX="221.0" layoutY="72.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Utente eliminato con successo !" wrappingWidth="293.23046875">
                      <font>
                         <Font name="System Bold" size="18.0" />
                      </font>
                   </Text>
-                  <Text layoutX="257.0" layoutY="102.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Premere Ok per Continuare">
+                  <Text layoutX="221.0" layoutY="100.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Premere Ok per continuare" wrappingWidth="262.13671875">
                      <font>
                         <Font size="18.0" />
                      </font>
                   </Text>
-                  <Button fx:id="okButton" layoutX="414.0" layoutY="170.0" mnemonicParsing="false" onAction="#okButtonControl" style="-fx-background-color: ffcc66;" text="Ok">
+                  <Button fx:id="okButton" layoutX="450.0" layoutY="157.0" mnemonicParsing="false" onAction="#okButtonControl" style="-fx-background-color: #ffcc66;" text="Ok">
                      <font>
                         <Font name="System Bold" size="18.0" />
                      </font>
                   </Button>
                </children>
-            </AnchorPane>
+          </AnchorPane>
         </children>
       </VBox>
    </children>
