@@ -28,9 +28,9 @@ public class MainPage {
     	p.showUserListPage(event, l);
         */
     	
-    	DeleteSuccesPage p = new DeleteSuccesPage(); 
-    	p.showDeleteSuccessPage(event);
-    	
+    
+    	StaticsProductPage p = new StaticsProductPage(); 
+    	p.showStaticsProductPage(event);
     
     }
 

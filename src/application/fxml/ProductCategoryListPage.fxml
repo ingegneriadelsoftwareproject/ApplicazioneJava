@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="567.0" prefWidth="644.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.boundary.ProductCategoryListPage">
+   <children>
+      <Hyperlink fx:id="abbigliamentoLink" layoutX="78.0" layoutY="50.0" prefHeight="35.0" prefWidth="137.0" text="Abbigliamento" AnchorPane.bottomAnchor="482.0" AnchorPane.leftAnchor="75.0" AnchorPane.rightAnchor="429.0" AnchorPane.topAnchor="50.0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Hyperlink>
+      <Hyperlink fx:id="alimentariLink" layoutX="68.0" layoutY="78.0" prefHeight="35.0" prefWidth="262.0" text="Alimentari e cura della casa " AnchorPane.leftAnchor="75.0" AnchorPane.rightAnchor="307.0" AnchorPane.topAnchor="15.0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Hyperlink>
+      <Hyperlink fx:id="autoMotoLink" layoutX="72.0" layoutY="81.0" text="Auto e Moto" AnchorPane.leftAnchor="72.0" AnchorPane.topAnchor="81.0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Hyperlink>
+      <Hyperlink fx:id="casaCucinaLink" layoutX="70.0" layoutY="115.0" text="Casa e Cucina" AnchorPane.leftAnchor="70.0" AnchorPane.topAnchor="115.0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Hyperlink>
+      <Hyperlink fx:id="elettronicaLink" layoutX="84.0" layoutY="150.0" text="Elettronica" AnchorPane.leftAnchor="75.0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Hyperlink>
+      <Hyperlink fx:id="faiDaTeLink" layoutX="75.0" layoutY="185.0" text="Fai da te" AnchorPane.leftAnchor="75.0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Hyperlink>
+      <Hyperlink fx:id="giardinoLink" layoutX="83.0" layoutY="220.0" text="Giardino" AnchorPane.leftAnchor="75.0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Hyperlink>
+      <Hyperlink fx:id="gioielliLink" layoutX="75.0" layoutY="255.0" text="Gioielli" AnchorPane.leftAnchor="75.0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Hyperlink>
+      <Hyperlink fx:id="informaticaLink" layoutX="72.0" layoutY="290.0" text="Informatica" AnchorPane.leftAnchor="75.0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Hyperlink>
+      <Hyperlink fx:id="videogiochiLink" layoutX="79.0" layoutY="325.0" text="Videogiochi" AnchorPane.leftAnchor="75.0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Hyperlink>
+      <Hyperlink fx:id="sportLink" layoutX="81.0" layoutY="360.0" text="Sport" AnchorPane.leftAnchor="75.0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Hyperlink>
+      <Hyperlink fx:id="scarpeBorseLink" layoutX="81.0" layoutY="395.0" text="Scarpe e Borse" AnchorPane.leftAnchor="75.0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Hyperlink>
+      <ImageView fitHeight="35.0" fitWidth="39.0" layoutX="38.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../img/simboli-dell-abbigliamento-abbigliamento-isolato-di-vettore-49309339.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="35.0" fitWidth="36.0" layoutX="38.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../img/forchetta_e_bicchiere_.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="35.0" fitWidth="36.0" layoutX="37.0" layoutY="85.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../img/ll.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="35.0" fitWidth="36.0" layoutX="38.0" layoutY="115.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../img/16027.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="35.0" fitWidth="36.0" layoutX="38.0" layoutY="150.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../img/coil-146520_960_720.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="35.0" fitWidth="36.0" layoutX="37.0" layoutY="185.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../img/depositphotos_197304002-stock-illustration-carpenter-with-saw-black-icon.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="35.0" fitWidth="36.0" layoutX="37.0" layoutY="220.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../img/icona-di-giardinaggio-46089842.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="37.0" layoutY="255.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../img/43771430-anello-diamante-immagine-icona-del-vettore-gioielli-può-essere-usato-anche-per-il-matrimonio-adatto-per.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="35.0" fitWidth="36.0" layoutX="38.0" layoutY="290.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../img/3643757-computer-desktop-monitor-pc-personal_113441.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="35.0" fitWidth="43.0" layoutX="33.0" layoutY="325.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../img/quadri-su-tela-icona-di-videogiochi.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="35.0" fitWidth="36.0" layoutX="38.0" layoutY="360.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../img/21049941-sports-icons.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="35.0" fitWidth="43.0" layoutX="33.0" layoutY="395.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../img/borse-femminili-e-scarpe-delle-icone-nere-28869776.jpg" />
+         </image>
+      </ImageView>
+      <Button fx:id="backButton" layoutX="443.0" layoutY="400.0" mnemonicParsing="false" onAction="#backButtonControl" style="-fx-background-color: #ffcc66;" text="Indietro">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Button>
+      <Label layoutX="404.0" layoutY="63.0" text="EC-17 Manager" textFill="#360ad3">
+         <font>
+            <Font name="System Bold" size="25.0" />
+         </font>
+      </Label>
+      <Text layoutX="332.0" layoutY="158.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Scegliere la categoria di prodotti di cui si vuole visualizzare le statistiche" wrappingWidth="222.13671875">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>
