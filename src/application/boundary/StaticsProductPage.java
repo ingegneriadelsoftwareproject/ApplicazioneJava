@@ -1,5 +1,6 @@
 package application.boundary;
 
+import application.entity.Article;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -19,13 +20,13 @@ public class StaticsProductPage {
     private Tab venditeTab;
 
     @FXML
-    private TableView<?> venditeTable;
+    private TableView<Article> venditeTable;
 
     @FXML
-    private TableColumn<?, ?> tipoDiBeneColumn;
+    private TableColumn<Article, String> articoloColumn;
 
     @FXML
-    private TableColumn<?, ?> importoColumn;
+    private TableColumn<Article, Float> importoColumn;
 
     @FXML
     private PieChart venditeChart;

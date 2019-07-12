@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="497.0" prefWidth="735.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.boundary.UserStaticsPage">
+   <children>
+      <AnchorPane prefHeight="499.0" prefWidth="735.0">
+         <children>
+            <TabPane layoutX="-3.0" layoutY="-3.0" prefHeight="489.0" prefWidth="743.0" tabClosingPolicy="UNAVAILABLE">
+              <tabs>
+                <Tab fx:id="OrdiniTab" text="Ordini">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <TableView fx:id="ordiniTable" layoutX="19.0" layoutY="24.0" prefHeight="396.0" prefWidth="708.0">
+                                <columns>
+                                  <TableColumn fx:id="numOrdineColumn" prefWidth="91.0" text="Ordine" />
+                                  <TableColumn fx:id="numArticoliColumn" prefWidth="116.0" text="Numero Articoli" />
+                                    <TableColumn fx:id="dataColumn" prefWidth="106.0" text="Data" />
+                                    <TableColumn fx:id="categoriaColumn" prefWidth="306.0" text="Categorie" />
+                                    <TableColumn fx:id="totaleColumn" prefWidth="106.0" text="Totale ($)" />
+                                </columns>
+                              </TableView>
+                           </children>
+                        </AnchorPane>
+                  </content>
+                </Tab>
+                <Tab fx:id="PreferenzeTab" text="Preferenze">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <TableView fx:id="preferenzeTable" layoutX="20.0" layoutY="49.0" prefHeight="335.0" prefWidth="200.0">
+                                <columns>
+                                  <TableColumn fx:id="categoriaColumn" prefWidth="95.0" text="Categoria " />
+                                  <TableColumn fx:id="importoColumn" prefWidth="104.0" text="Importo" />
+                                </columns>
+                              </TableView>
+                              <PieChart fx:id="preferenzeChart" layoutX="229.0" layoutY="30.0" title="Preferenze di Acquisto" />
+                           </children>
+                        </AnchorPane>
+                  </content>
+                </Tab>
+              </tabs>
+            </TabPane>
+         </children>
+      </AnchorPane>
+   </children>
+</VBox>

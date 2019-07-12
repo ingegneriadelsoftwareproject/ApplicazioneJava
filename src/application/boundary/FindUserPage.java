@@ -10,6 +10,8 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
+import javafx.scene.control.DatePicker;
+import javafx.scene.control.Label;
 import javafx.scene.control.RadioButton;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
@@ -32,20 +34,21 @@ public class FindUserPage {
     private RadioButton dataDiNascitaRadioBox;
 
     @FXML
-    private ComboBox<?> birthDayBox;
+    private DatePicker data;
+    
+    @FXML
+    private Label datalabel;
 
     @FXML
-    private ComboBox<?> birthMounthBox;
-
-    @FXML
-    private ComboBox<?> birthYearBox;
-
+    void dataControl(ActionEvent event) {
+    
+    }
     @FXML
     private Button findButton;
 
     @FXML
     void findButtonControl(ActionEvent event) {
-
+    	
     }
     //aggiungere metodo read per la lettura dei filtri 
     
@@ -71,9 +74,6 @@ public class FindUserPage {
         assert productCategoryComboBox != null : "fx:id=\"productCategoryComboBox\" was not injected: check your FXML file 'FindUserPage.fxml'.";
         assert usernameTextField != null : "fx:id=\"usernameTextField\" was not injected: check your FXML file 'FindUserPage.fxml'.";
         assert dataDiNascitaRadioBox != null : "fx:id=\"dataDiNascitaRadioBox\" was not injected: check your FXML file 'FindUserPage.fxml'.";
-        assert birthDayBox != null : "fx:id=\"birthDayBox\" was not injected: check your FXML file 'FindUserPage.fxml'.";
-        assert birthMounthBox != null : "fx:id=\"birthMounthBox\" was not injected: check your FXML file 'FindUserPage.fxml'.";
-        assert birthYearBox != null : "fx:id=\"birthYearBox\" was not injected: check your FXML file 'FindUserPage.fxml'.";
         assert findButton != null : "fx:id=\"findButton\" was not injected: check your FXML file 'FindUserPage.fxml'.";
 
     }

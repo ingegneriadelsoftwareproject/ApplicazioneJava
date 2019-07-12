@@ -8,11 +8,11 @@ import javafx.collections.ObservableList;
 // prova di User 
 public class User {
 	
-	public String name;
-	public String surname;
-	public String email; 
-	public Date birthDate; 
-	public String userName; 
+	private String name;
+	private String surname;
+	private String email; 
+	private Date birthDate; 
+	private String userName; 
 
 	
 	public User(String name, String surname,String email, String userName, Date birthDate ) {

@@ -27,11 +27,8 @@ public class MainPage {
     	UserListPage p = new UserListPage();
     	p.showUserListPage(event, l);
         */
-    	
-    
-    	StaticsProductPage p = new StaticsProductPage(); 
-    	p.showStaticsProductPage(event);
-    
+    	FindUserPage p = new FindUserPage(); 
+    	p.showFindUserPage(event);
     }
 
 }

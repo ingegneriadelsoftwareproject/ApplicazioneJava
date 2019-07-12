@@ -50,7 +50,8 @@
                         <Font name="System Bold" size="18.0" />
                      </font>
                   </Button>
-                  <DatePicker layoutX="282.0" layoutY="271.0" />
+                  <DatePicker fx:id="data" layoutX="282.0" layoutY="271.0" onAction="#dataControl" />
+                  <Label fx:id="datalabel" layoutX="139.0" layoutY="322.0" text="Label" />
                </children>
           </AnchorPane>
         </children>
