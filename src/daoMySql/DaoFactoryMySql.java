@@ -1,5 +1,6 @@
 package daoMySql;
 
+import dao.AdministratorDao;
 import dao.ArticleDao;
 import dao.CategoryDao;
 import dao.DaoFactory;
@@ -31,5 +32,12 @@ public class DaoFactoryMySql extends DaoFactory{
 		return DatabaseManagerMySql.getInstance();
 		
 	}
+
+	@Override
+	public AdministratorDao getAdministratorDao() {
+		// TODO Auto-generated method stub
+		return new AdministratorDaoMySql();
+	}
+	
 
 }

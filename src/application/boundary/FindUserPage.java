@@ -1,10 +1,14 @@
 package application.boundary;
 
 import java.net.URL;
+import java.sql.Date;
+import java.time.LocalDate;
+import java.util.List;
 import java.util.ResourceBundle;
 
 import application.controller.FindUserController;
 import application.entity.Filter;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -28,7 +32,7 @@ public class FindUserPage {
     private URL location;
 
     @FXML
-    private ComboBox<?> productCategoryComboBox;
+    private ComboBox<String> productCategoryComboBox;
 
     @FXML
     private TextField usernameTextField;
@@ -53,14 +57,17 @@ public class FindUserPage {
     void findButtonControl(ActionEvent event) {
     	
     	FindUserController p = new FindUserController(); 
-    	Filter f = new Filter(null,null,null); //passare categoria, username e data di nascita letti 
+    	String Category = productCategoryComboBox.getValue(); 
+    	String username= usernameTextField.getText(); 
+    	LocalDate userdata = data.getValue(); 
+    	Filter f = new Filter(Category,username,userdata); //passare categoria, username e data di nascita letti 
     	p.findUserButtonPressed(event, f);
     	
     	
     }
     //aggiungere metodo read per la lettura dei filtri 
     
-    public void showFindUserPage(ActionEvent event) {
+    public void showFindUserPage(ActionEvent event, ObservableList<String> l) {
      	try {
 			FXMLLoader loader = new FXMLLoader(); 
 			loader.setLocation(getClass().getResource("../fxml/FindUserPage.fxml"));
@@ -69,6 +76,8 @@ public class FindUserPage {
 			Stage s = new Stage();
 			s.setScene(scene);
 			s.setTitle("Find User Page");
+			FindUserPage p = loader.getController(); 
+			p.initData(l);
 			s.show();
 			((Node)(event.getSource())).getScene().getWindow().hide();
 			
@@ -76,6 +85,12 @@ public class FindUserPage {
 		} catch(Exception e) {
 			e.printStackTrace();
 		}
+    }
+    
+    public void initData(ObservableList<String> l) {
+    	
+    	productCategoryComboBox.setItems(l);
+    	
     }
     @FXML
     void initialize() {

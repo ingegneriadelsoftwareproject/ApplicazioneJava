@@ -10,6 +10,8 @@ public class FindUserController {
 	
 	public void findUserButtonPressed(ActionEvent event, Filter f) {
 		
+		//logica funzionamento ricerca, con applicazione di filtri !!
+		
 	}
 	
 	

@@ -1,5 +1,7 @@
 package application.controller;
 
+import dao.AdministratorDao;
+import dao.DaoFactory;
 import dao.UserDao;
 import daoMySql.UserDaoMySql;
 import javafx.event.ActionEvent;
@@ -7,7 +9,7 @@ import javafx.event.ActionEvent;
 public class SessionManager { 
 	 
    private static SessionManager instance = null; 
-   UserDao userDAO = new UserDaoMySql();  
+   AdministratorDao adminDAO = DaoFactory.getIstance().getAdministratorDao();  
    private String activeUserName = null; 
    //default constructor
    private SessionManager() {              
@@ -35,7 +37,7 @@ public class SessionManager {
  
     public void authenticate(String userName, String password, ActionEvent event) {         
     	
-    	if (userDAO.exists(userName, password)) {                        
+    	if (adminDAO.exists(userName, password)) {                        
     		setActiveUserName(userName);         
     		}     
     	}         

@@ -1,12 +1,13 @@
 package application.entity;
 
+import java.time.LocalDate;
 import java.util.Date;
 
 public class Filter {
 	
 	private String Category; 
 	private String Username; 
-	private Date birthDate; //usare java.Calendar?
+	private LocalDate birthDate; //usare java.Calendar?
 	public String getCategory() {
 		return Category;
 	}
@@ -19,21 +20,19 @@ public class Filter {
 	public void setUsername(String username) {
 		Username = username;
 	}
-	public Date getBirthDate() {
+	public LocalDate getBirthDate() {
 		return birthDate;
 	}
-	public void setBirthDate(Date birthDate) {
+	public void setBirthDate(LocalDate birthDate) {
 		this.birthDate = birthDate;
 	}
-	
-	
-	public Filter(String category, String username, Date birthDate) {
+	public Filter(String category, String username, LocalDate birthDate) {
 		super();
 		Category = category;
 		Username = username;
 		this.birthDate = birthDate;
 	}
-	
+
 	
 
 }
