@@ -2,6 +2,9 @@ package application.boundary;
 
 import java.net.URL;
 import java.util.ResourceBundle;
+
+import application.controller.FindUserController;
+import application.entity.Filter;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -48,6 +51,11 @@ public class FindUserPage {
 
     @FXML
     void findButtonControl(ActionEvent event) {
+    	
+    	FindUserController p = new FindUserController(); 
+    	Filter f = new Filter(null,null,null); //passare categoria, username e data di nascita letti 
+    	p.findUserButtonPressed(event, f);
+    	
     	
     }
     //aggiungere metodo read per la lettura dei filtri 

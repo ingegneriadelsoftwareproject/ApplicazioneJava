@@ -8,7 +8,6 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
 
-
 <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="497.0" prefWidth="735.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.boundary.UserStaticsPage">
    <children>
       <AnchorPane prefHeight="499.0" prefWidth="735.0">
@@ -36,13 +35,13 @@
                   <content>
                     <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                            <children>
-                              <TableView fx:id="preferenzeTable" layoutX="20.0" layoutY="49.0" prefHeight="335.0" prefWidth="200.0">
+                              <PieChart fx:id="preferenzeChart" layoutX="229.0" layoutY="30.0" title="Preferenze di Acquisto" />
+                              <TableView fx:id="preferenzeTable" layoutX="14.0" layoutY="36.0" prefHeight="388.0" prefWidth="200.0">
                                 <columns>
-                                  <TableColumn fx:id="categoriaColumn" prefWidth="95.0" text="Categoria " />
-                                  <TableColumn fx:id="importoColumn" prefWidth="104.0" text="Importo" />
+                                  <TableColumn fx:id="categoriaPreferitaColumn" prefWidth="89.0" text="Categoria" />
+                                    <TableColumn fx:id="importoPreferenzeColumn" prefWidth="110.0" text="importo" />
                                 </columns>
                               </TableView>
-                              <PieChart fx:id="preferenzeChart" layoutX="229.0" layoutY="30.0" title="Preferenze di Acquisto" />
                            </children>
                         </AnchorPane>
                   </content>

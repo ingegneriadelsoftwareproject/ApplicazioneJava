@@ -1,6 +1,7 @@
 package application.boundary;
 import java.sql.Date;
 
+import application.controller.MainPageController;
 import application.entity.User;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -19,16 +20,9 @@ public class MainPage {
 
     @FXML
     void loginButtonControl(ActionEvent event){
-    	//per provare la userListPage
-    	/*
-    	ObservableList<User> l = FXCollections.observableArrayList();
-    	l.add(new User("luigi", "Napolitano", "giggi@hotmail.it", "giggi0095", Date.valueOf("1995-05-09")));
-    	l.add(new User("francesco", "de sapio", "francesco@libero.it", "spid14", Date.valueOf("1991-12-10")));
-    	UserListPage p = new UserListPage();
-    	p.showUserListPage(event, l);
-        */
-    	FindUserPage p = new FindUserPage(); 
-    	p.showFindUserPage(event);
+    	
+    	MainPageController p = new MainPageController(); 
+    	p.loginButtonPressed(event);
     }
 
 }

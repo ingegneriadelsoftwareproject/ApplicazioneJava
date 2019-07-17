@@ -8,28 +8,23 @@ public class Order {
 	private String usernameUser; 
 	private Date date; 
 	private Float total; 
-	private Integer numeroArticoli;// DA AGGIUNGERE AL DATABASE 
-	ArrayList<Category> categories; //Lista di categorie che compongono l'ordine
+	private Integer numeroArticoli;// DA AGGIUNGERE AL DATABASE
 	
-	public ArrayList<Category> getCategories() {
-		return categories;
-	}
 
-	public void setCategories(ArrayList<Category> categories) {
-		this.categories = categories;
-	}
+
+	
 
 	public void setTotal(Float total) {
 		this.total = total;
 	}
 
-	public Order (String cod, String name, Date data, float total, Integer numeroArt, ArrayList<Category> categories) {
+	public Order (String cod, String name, Date data, float total, Integer numeroArt) {
 		this.code=cod; 
 		this.usernameUser=name; 
 		this.date=data; 
 		this.total= total; 
 		this.numeroArticoli=numeroArt;
-		this.categories=categories; 
+		
 	}
 
 	public Integer getNumeroArticoli() {

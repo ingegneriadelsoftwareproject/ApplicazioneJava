@@ -2,10 +2,14 @@ package application.entity;
 
 public class Article {
 	
-	private String code; 
-	private String categorycode; 
+	private String code;
+	private String categoryCode; 
 	private String name; 
 	private String price;
+	private String description; 
+	private String dimension; 
+	private Float weight; 
+	
 	
 	
 	public String getCode() {
@@ -17,17 +21,7 @@ public class Article {
 		this.code = code;
 	}
 
-
-	public String getCategorycode() {
-		return categorycode;
-	}
-
-
-	public void setCategorycode(String categorycode) {
-		this.categorycode = categorycode;
-	}
-
-
+	
 	public String getName() {
 		return name;
 	}
@@ -48,13 +42,59 @@ public class Article {
 	}
 
 
-	public Article(String code, String categorycode, String name, String price) {
+	public String getCategoryCode() {
+		return categoryCode;
+	}
+
+
+	public void setCategoryCode(String categoryCode) {
+		this.categoryCode = categoryCode;
+	}
+
+
+	public String getDescription() {
+		return description;
+	}
+
+
+	public void setDescription(String description) {
+		this.description = description;
+	}
+
+
+	public String getDimension() {
+		return dimension;
+	}
+
+
+	public void setDimension(String dimension) {
+		this.dimension = dimension;
+	}
+
+
+	public Float getWeight() {
+		return weight;
+	}
+
+
+	public void setWeight(Float weight) {
+		this.weight = weight;
+	}
+
+
+	public Article(String code, String categoryCode, String name, String price, String description, String dimension,
+			Float weight) {
 		super();
 		this.code = code;
-		this.categorycode = categorycode;
+		this.categoryCode = categoryCode;
 		this.name = name;
 		this.price = price;
-	} 
-	
+		this.description = description;
+		this.dimension = dimension;
+		this.weight = weight;
+	}
+
+
+
 
 }

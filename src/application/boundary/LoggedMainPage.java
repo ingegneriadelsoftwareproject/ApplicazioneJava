@@ -5,6 +5,7 @@ import java.text.ParseException;
 import java.util.LinkedList;
 import java.util.Locale;
 
+import application.controller.LoggedMainPageController;
 import application.entity.User;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -33,15 +34,21 @@ public class LoggedMainPage {
     @FXML
     void findUserButtonControl(ActionEvent event) throws ParseException {
     	
+    	LoggedMainPageController p = new LoggedMainPageController(); 
+    	p.findUserButtonPressed(event);
+    	
     }
 
     @FXML
     void logoutLabelControl(ActionEvent event) {
+    	
 
     }
 
     @FXML
     void viewProductStaticsControl(ActionEvent event) {
+    	LoggedMainPageController p = new LoggedMainPageController();
+    	p.viewProductStaticsButtonPressed(event);
 
     }
     

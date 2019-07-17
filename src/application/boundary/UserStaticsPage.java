@@ -1,10 +1,12 @@
 package application.boundary;
 
-import java.util.ArrayList;
 import java.util.Date;
+import java.util.LinkedList;
 
 import application.entity.Category;
 import application.entity.Order;
+import application.entity.OrderStaticsUser;
+import application.entity.PreferencesStaticsUser;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -19,38 +21,38 @@ import javafx.stage.Stage;
 public class UserStaticsPage {
 
     @FXML
-    private Tab OrdiniTab;
+    private Tab OrdiniTab;  // tab statistiche sugli ordini 
+    
+    @FXML
+    private Tab PreferenzeTab; // tab statistiche relative alle preferenze 
 
     @FXML
-    private TableView<Order> ordiniTable;
+    private TableView<OrderStaticsUser> ordiniTable;
 
     @FXML
-    private TableColumn<Order, String> numOrdineColumn;
+    private TableColumn<Order, String > numOrdineColumn;
 
     @FXML
-    private TableColumn<Order, Integer> numArticoliColumn;
+    private TableColumn<Order,Integer> numArticoliColumn;
 
     @FXML
     private TableColumn<Order, Date> dataColumn;
 
     @FXML
-    private TableColumn<Order, ArrayList<Category>> categoriaColumn;
+    private TableColumn<OrderStaticsUser, LinkedList<Category>> categoriaColumn;
 
     @FXML
     private TableColumn<Order, Float> totaleColumn;
-
-    @FXML
-    private Tab PreferenzeTab;
-
-    @FXML
-    private TableView<Category> preferenzeTable;
-
-    @FXML
-    private TableColumn<Category, Float> importoColumn;
-
-    @FXML
-    private PieChart preferenzeChart;
     
+    @FXML
+    private TableView<PreferencesStaticsUser> preferenzeTable;
+    
+    @FXML
+    private TableColumn<PreferencesStaticsUser, Category> categoriaPreferitaColumn;
+
+    @FXML
+    private TableColumn<PreferencesStaticsUser, Float> importoPreferenzeColumn;
+
     public void showUserStaticsPage(ActionEvent event ) {
     	try {
 			FXMLLoader loader = new FXMLLoader(); 
@@ -68,4 +70,5 @@ public class UserStaticsPage {
 			e.printStackTrace();
 		}
     }
+
 }

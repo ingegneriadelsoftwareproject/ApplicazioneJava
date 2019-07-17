@@ -13,8 +13,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-
-<AnchorPane xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171" fx:controller="application.boundary.StaticsProductPage">
+<AnchorPane xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.boundary.StaticsProductPage">
    <children>
       <VBox prefHeight="400.0" prefWidth="640.0">
         <children>
@@ -26,9 +25,9 @@
                         <content>
                           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="457.0" prefWidth="688.0">
                                  <children>
-                                    <TableView fx:id="venditeTable" layoutX="14.0" layoutY="14.0" prefHeight="390.0" prefWidth="221.0">
+                                    <TableView fx:id="venditeTable" layoutX="14.0" layoutY="15.0" prefHeight="390.0" prefWidth="221.0">
                                       <columns>
-                                        <TableColumn fx:id="tipoDiBeneColumn" prefWidth="102.0" text="Tipo di bene" />
+                                        <TableColumn fx:id="articoloColumn" prefWidth="102.0" text="Articolo" />
                                         <TableColumn fx:id="importoColumn" prefWidth="118.0" text="Importo" />
                                       </columns>
                                     </TableView>

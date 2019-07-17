@@ -1,5 +1,6 @@
 package application.boundary;
 
+import application.controller.LoginPageController;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -24,6 +25,11 @@ public class LoginPage {
 
     @FXML
     void loginButtonControl(ActionEvent event) {
+    	
+    	String userName = nomeTextField.getText().toString(); 
+    	String password = passwordTextField.getText().toString(); 
+    	LoginPageController p = new LoginPageController(); 
+    	p.loginButtonPressed(event, userName, password);
     	
     }
     
