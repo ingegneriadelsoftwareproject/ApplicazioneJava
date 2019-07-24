@@ -9,7 +9,6 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
-import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 
 public class LoginPage {
@@ -24,15 +23,18 @@ public class LoginPage {
     private Button loginButton;
 
     @FXML
-    void loginButtonControl(ActionEvent event) {
+    void loginButtonControl(ActionEvent event){
     	
     	String userName = nomeTextField.getText().toString(); 
     	String password = passwordTextField.getText().toString(); 
     	LoginPageController p = new LoginPageController(); 
     	p.loginButtonPressed(event, userName, password);
+    	((Node)(event.getSource())).getScene().getWindow().hide();
     	
     }
-    
+    public void close () {
+    	
+    }
     public void showLoginPage(ActionEvent event) {
     	try {
 			FXMLLoader loader = new FXMLLoader(); 
@@ -43,7 +45,7 @@ public class LoginPage {
 			s.setScene(scene);
 			s.setTitle("Login Page");
 			s.show();
-			((Node)(event.getSource())).getScene().getWindow().hide();
+			//((Node)(event.getSource())).getScene().getWindow().hide();
 			
 			
 		} catch(Exception e) {

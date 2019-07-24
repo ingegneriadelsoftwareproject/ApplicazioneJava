@@ -1,5 +1,6 @@
 package application.boundary;
 
+import application.controller.LoginFailledNoCredenzialiController;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -8,7 +9,11 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.stage.Stage;
-
+/**
+ * pagina di errore per credenziali non inserite 
+ * @author UTENTE
+ *
+ */
 public class LoginFailledNoCredenziali {
 
     @FXML
@@ -16,6 +21,8 @@ public class LoginFailledNoCredenziali {
 
     @FXML
     void okButtonControl(ActionEvent event) {
+    	LoginFailledNoCredenzialiController p = new LoginFailledNoCredenzialiController(); 
+    	p.okButtonNoCredenzialiPressed(event);
     	((Node)(event.getSource())).getScene().getWindow().hide();
 
     }

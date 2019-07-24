@@ -1,11 +1,15 @@
 package application.boundary;
 
 import java.net.URL;
+
 import java.sql.Date;
+import java.util.List;
 import java.util.ResourceBundle;
 
+import application.controller.UserPageController;
 import application.entity.User;
 import javafx.collections.FXCollections;
+import javafx.collections.ListChangeListener;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -54,20 +58,25 @@ public class UserListPage   {
 
     @FXML
     private Button backButton;
+    
+    public static ObservableList<User> observableUserList = FXCollections.observableArrayList(); 
+    
+    public static List<User> userList; 
 
     @FXML
     void backButtonControl(ActionEvent event) {
-
+    	((Node)(event.getSource())).getScene().getWindow().hide();
     }
     
     @FXML
     void userClicckedControl(MouseEvent event) {
     	
-    	/*
+    	
     	User u = userTable.getSelectionModel().getSelectedItem(); 
-    	UserPage p = new UserPage(); 
-    	p.showUserPage(event, u);
-    	*/
+    	UserPageController p = new UserPageController(); 
+    	p.userRowPressed(event,u);
+    	//((Node)(event.getSource())).getScene().getWindow().hide();
+    	
     }
     
     
@@ -76,7 +85,7 @@ public class UserListPage   {
      * @param event click del bottone cerca
      * @param l lista di utenti trovati 
      */
-    public void showUserListPage(ActionEvent event, ObservableList<User> l ) {
+    public void showUserListPage(ActionEvent event) {
      	try {
 			FXMLLoader loader = new FXMLLoader(); 
 			loader.setLocation(getClass().getResource("../fxml/UserListPage.fxml"));
@@ -86,7 +95,7 @@ public class UserListPage   {
 			s.setScene(scene);
 			s.setTitle("User List Page");
 			UserListPage p = loader.getController(); 
-			p.initData(l);
+			p.initData(userList);
 			s.show();
 			((Node)(event.getSource())).getScene().getWindow().hide();
 			
@@ -95,14 +104,18 @@ public class UserListPage   {
 			e.printStackTrace();
 		}
     }
-    //per provare la table view 
-   
-    /**
-     * metodo per settare i valori della tableview
-     * @param l lista di User
-     */
 
-     void initData(ObservableList<User> l ) {
+     
+   
+    public void setUserList(List<User> l ) {
+    	UserListPage.userList = l;  
+    }
+    
+    public static void updateUserList ( User u ) {
+    	observableUserList.remove(u); 
+    }
+     @SuppressWarnings("unchecked")
+	public void initData(List<User> l ) {
     	
     	
     	nameColumn.setCellValueFactory(new PropertyValueFactory<User,String>("name"));
@@ -111,7 +124,23 @@ public class UserListPage   {
 		birthColumn.setCellValueFactory(new PropertyValueFactory<User,Date>("birthDate"));
 		usernameColumn.setCellValueFactory(new PropertyValueFactory<User,String>("userName"));
 		userTable.setColumnResizePolicy(TableView.CONSTRAINED_RESIZE_POLICY);
-		userTable.setItems(l);//va passata una observable list
+		observableUserList.setAll(l);
+		observableUserList.addListener(new ListChangeListener() {
+
+			@Override
+			public void onChanged(Change change) {
+				// TODO Auto-generated method stub
+				while (change.next()) {
+
+					System.out.println("Was added? " + change.wasAdded());
+
+					System.out.println("Was removed? " + change.wasRemoved());
+
+					}
+			}
+			
+		});
+		userTable.setItems(observableUserList);//va passata una observable list
 		
     }
  

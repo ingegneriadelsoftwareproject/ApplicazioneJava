@@ -2,8 +2,6 @@ package application.controller;
 
 import dao.AdministratorDao;
 import dao.DaoFactory;
-import dao.UserDao;
-import daoMySql.UserDaoMySql;
 import javafx.event.ActionEvent;
 
 public class SessionManager { 

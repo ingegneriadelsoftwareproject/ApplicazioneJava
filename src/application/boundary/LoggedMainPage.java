@@ -1,6 +1,7 @@
 package application.boundary;
 
 import java.text.DateFormat;
+
 import java.text.ParseException;
 import java.util.LinkedList;
 import java.util.Locale;
@@ -10,13 +11,18 @@ import application.entity.User;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Hyperlink;
 import javafx.scene.control.Label;
 import javafx.stage.Stage;
-
+/**
+ * pagina principale dopo che l'amministratore ha effettuato il login 
+ * @author UTENTE
+ *
+ */
 public class LoggedMainPage {
 
     @FXML
@@ -41,6 +47,9 @@ public class LoggedMainPage {
 
     @FXML
     void logoutLabelControl(ActionEvent event) {
+    	LoggedMainPageController p = new LoggedMainPageController(); 
+    	p.logoutLabelPressed(event);
+    	((Node)(event.getSource())).getScene().getWindow().hide();
     	
 
     }

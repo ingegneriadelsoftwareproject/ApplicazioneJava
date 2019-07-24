@@ -3,11 +3,16 @@ package application.boundary;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.stage.Stage;
-
+/**
+ * pagina di successo quando si effettua il Login 
+ * @author UTENTE
+ *
+ */
 public class LoginOkPage {
 
     @FXML
@@ -15,6 +20,8 @@ public class LoginOkPage {
 
     @FXML
     void okButtonControl(ActionEvent event) {
+    	
+    ((Node)(event.getSource())).getScene().getWindow().hide();
 
     }
     

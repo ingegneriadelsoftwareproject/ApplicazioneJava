@@ -2,8 +2,7 @@ package application.entity;
 
 import java.util.Date;
 
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
+
 
 // prova di User 
 public class User {
@@ -13,19 +12,32 @@ public class User {
 	private String email; 
 	private Date birthDate; 
 	private String userName; 
+	private String password; 
 
 	
-	public User(String name, String surname,String email, String userName, Date birthDate ) {
-		this.name=name; 
-		this.surname=surname; 
-		this.email=email; 
-		this.birthDate=birthDate; 
-		this.userName=userName; 
+
+	public User() {
 		
 	}
-	
-	
-	
+
+	public User(String name, String surname, String email, Date birthDate, String userName, String password) {
+		super();
+		this.name = name;
+		this.surname = surname;
+		this.email = email;
+		this.birthDate = birthDate;
+		this.userName = userName;
+		this.password = password;
+	}
+
+	public String getPassword() {
+		return password;
+	}
+
+	public void setPassword(String password) {
+		this.password = password;
+	}
+
 	public Date getBirthDate() {
 		return birthDate;
 	}

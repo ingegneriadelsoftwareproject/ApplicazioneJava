@@ -3,6 +3,7 @@ package application.controller;
 import application.boundary.LoggedMainPage;
 import application.boundary.LoginFailledCredenzialiErrate;
 import application.boundary.LoginFailledNoCredenziali;
+import application.boundary.LoginOkPage;
 import javafx.event.ActionEvent;
 
 public class LoginPageController {
@@ -14,8 +15,10 @@ public class LoginPageController {
 		s.authenticate(userName, password, event);
 		
 		if ( s.isUserAuthenticated()) {
-			LoggedMainPage p = new LoggedMainPage();
-			p.showLoggedMainPage(event, userName);
+			LoggedMainPage p2 = new LoggedMainPage();
+			p2.showLoggedMainPage(event, userName);
+			LoginOkPage p = new LoginOkPage(); 
+			p.showLoginOkPage(event);
 		}
 		else
 		{

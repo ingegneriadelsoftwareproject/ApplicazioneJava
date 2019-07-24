@@ -1,13 +1,10 @@
 package application.controller;
 
-import java.util.LinkedList;
-import java.util.List;
+
 
 import application.boundary.FindUserPage;
+import application.boundary.MainPage;
 import application.boundary.StaticsProductPage;
-import dao.CategoryDao;
-import dao.DaoFactory;
-import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 
 public class LoggedMainPageController {
@@ -15,10 +12,8 @@ public class LoggedMainPageController {
 	
 		public void findUserButtonPressed(ActionEvent event) {
 			
-			FindUserPage p = new FindUserPage(); 
-			CategoryDao categories = DaoFactory.getIstance().getCategoryDao(); 
-			ObservableList l = (ObservableList) categories.readAll();
-			p.showFindUserPage(event, l );
+			FindUserPage p = new FindUserPage();
+			p.showFindUserPage(event );
 			
 		}
 		
@@ -26,5 +21,13 @@ public class LoggedMainPageController {
 			StaticsProductPage p = new StaticsProductPage(); 
 			p.showStaticsProductPage(event);
 			
+		}
+		public void logoutLabelPressed(ActionEvent event) {
+			SessionManager s = SessionManager.getInstance(); 
+			s.logout(event);
+			MainPage p = new MainPage(); 
+			p.showMainPage(event);
+			
+		
 		}
 }
