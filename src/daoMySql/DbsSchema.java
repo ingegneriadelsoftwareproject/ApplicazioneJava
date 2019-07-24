@@ -2,6 +2,7 @@ package daoMySql;
 
 public final class DbsSchema {
 	
+	
 	public static final String ADMINISTRATOR_TABLE = "administrator"; 
 	public static final String ADMINISTRATOR_USERNAME_COLUMN = "username"; 
 	public static final String ADMINISTRATOR_PASSWORD_COLUMN = "password"; 
@@ -27,6 +28,7 @@ public final class DbsSchema {
 	public static final String ORDER_USERNAMEUSER_COLUMN = "username_user"; 
 	public static final String ORDER_DATE_COLUMN = "date_order"; 
 	public static final String ORDER_TOTAL_COLUMN = "total"; 
+	public static final String ORDER_NUMERO_ARTICOLI_COLUMN = "numart"; //da aggiungere al database
 	
 	public static final String USER_TABLE = "user"; 
 	public static final String USER_USERANAME_COLUMN = "username"; 
@@ -35,6 +37,10 @@ public final class DbsSchema {
 	public static final String USER_SURNAME_COLUMN = "surname"; 
 	public static final String USER_BIRTHDATE_COLUMN = "data_nascita"; 
 	public static final String USER_PASSWORD_COLUMN = "password"; 
+	
+	public static final String ORDER_LIST_TABLE = "order_list";
+	public static final String ORDER_LIST_CODE_ORDER_COLUMN = "code_order";
+	public static final String ORDER_LIST_CODE_ARTICLE_COLUMN = "code_article"; 
 	
 	
 }

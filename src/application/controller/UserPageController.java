@@ -1,14 +1,18 @@
 package application.controller;
 
+import java.util.LinkedList;
 import java.util.List;
 
 import application.boundary.DeleteSuccesPage;
 import application.boundary.UserListPage;
 import application.boundary.UserPage;
 import application.boundary.UserStaticsPage;
+import application.entity.Category;
+import application.entity.Order;
 import application.entity.OrderStaticsUser;
 import application.entity.PreferencesStaticsUser;
 import application.entity.User;
+import dao.CategoryDao;
 import dao.UserDao;
 import daoMySql.DaoFactoryMySql;
 import javafx.event.ActionEvent;
@@ -40,9 +44,25 @@ public class UserPageController {
 	
 	public void viewStaticsButtonPressed(ActionEvent event, User u ) {
 		
-		UserDao userDao = DaoFactoryMySql.getIstance().getUserDao(); 
-		List<OrderStaticsUser> l1 = userDao.readOrderStatics(u); 
-		List<PreferencesStaticsUser> l2 = userDao.readPreferences(u); 
+		UserDao userDao = DaoFactoryMySql.getIstance().getUserDao();
+		CategoryDao categoryDao = DaoFactoryMySql.getIstance().getCategoryDao(); 
+		List<Order> orderList = userDao.readOrder(u);
+		List<Category> categoryList = new LinkedList<Category>(); 
+		List<OrderStaticsUser> l1 = new LinkedList<>(); 
+		//per ogni ordine vengono lette le categorie di prodotti acquistati in quell'ordine 
+		for(Order x : orderList) {
+			
+			categoryList = categoryDao.readCategoryOrder(x); 
+			l1.add(new OrderStaticsUser((Order) x, categoryList)); 
+			
+		}
+	
+		
+				
+				
+		
+		
+		//List<PreferencesStaticsUser> l2 = userDao.readPreferences(u); 
 		UserStaticsPage p = new UserStaticsPage(); 
 		p.setOrderList(l1);
 		p.showUserStaticsPage(event);

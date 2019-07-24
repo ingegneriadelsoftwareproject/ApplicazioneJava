@@ -18,6 +18,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.chart.PieChart;
 import javafx.scene.control.Tab;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
@@ -59,6 +60,10 @@ public class UserStaticsPage {
     @FXML
     private TableColumn<PreferencesStaticsUser, Float> importoPreferenzeColumn;
     
+
+    @FXML
+    private PieChart preferenzeChart;
+    
     public static ObservableList<OrderStaticsUser> observableListOrderStatics = FXCollections.observableArrayList(); 
     public static ObservableList<PreferencesStaticsUser> observableListPreferenceStatics = FXCollections.observableArrayList();
     
@@ -98,7 +103,7 @@ public class UserStaticsPage {
 		ordiniTable.setColumnResizePolicy(TableView.CONSTRAINED_RESIZE_POLICY);
 		observableListOrderStatics.setAll(orderList); 
 		observableListOrderStatics.addListener(new ListChangeListener() {
-
+		
 			@Override
 			public void onChanged(Change change) {
 				// TODO Auto-generated method stub
@@ -112,7 +117,7 @@ public class UserStaticsPage {
 			}
 			
 		});
-		ordiniTable.setItems(observableListOrderStatics);
+		//ordiniTable.setItems(observableListOrderStatics);
 		
     }
     
