@@ -1,28 +1,32 @@
 package application.entity;
+
+import javafx.scene.chart.PieChart;
+
 /**
  * classe per settare i valori della table view sulle preferenze dell'utente
  * @author UTENTE
  *
  */
-public class PreferencesStaticsUser {
+public class PreferencesStaticsUser  {
 	
-	private Category categoria; 
+	private String categoria; 
 	private Float importo;
 	
-	public PreferencesStaticsUser(Category categoria, Float importo) {
+	
+	public PreferencesStaticsUser(String categoria, Float importo) {
 		super();
 		this.categoria = categoria;
 		this.importo = importo;
 	}
-	
-	public Category getCategoria() {
+
+	public String getCategoria() {
 		return categoria;
 	}
-	
-	public void setCategoria(Category categoria) {
+
+	public void setCategoria(String categoria) {
 		this.categoria = categoria;
 	}
-	
+
 	public Float getImporto() {
 		return importo;
 	}

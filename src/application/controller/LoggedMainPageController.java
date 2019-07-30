@@ -4,6 +4,7 @@ package application.controller;
 
 import application.boundary.FindUserPage;
 import application.boundary.MainPage;
+import application.boundary.ProductCategoryListPage;
 import application.boundary.StaticsProductPage;
 import javafx.event.ActionEvent;
 
@@ -18,8 +19,8 @@ public class LoggedMainPageController {
 		}
 		
 		public void viewProductStaticsButtonPressed(ActionEvent event) {
-			StaticsProductPage p = new StaticsProductPage(); 
-			p.showStaticsProductPage(event);
+			ProductCategoryListPage p = new ProductCategoryListPage(); 
+			p.showProductCategoryListPage(event);
 			
 		}
 		public void logoutLabelPressed(ActionEvent event) {

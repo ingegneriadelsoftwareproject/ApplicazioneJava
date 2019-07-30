@@ -45,27 +45,10 @@ public class UserPageController {
 	public void viewStaticsButtonPressed(ActionEvent event, User u ) {
 		
 		UserDao userDao = DaoFactoryMySql.getIstance().getUserDao();
-		CategoryDao categoryDao = DaoFactoryMySql.getIstance().getCategoryDao(); 
-		List<Order> orderList = userDao.readOrder(u);
-		List<Category> categoryList = new LinkedList<Category>(); 
-		List<OrderStaticsUser> l1 = new LinkedList<>(); 
-		//per ogni ordine vengono lette le categorie di prodotti acquistati in quell'ordine 
-		for(Order x : orderList) {
-			
-			categoryList = categoryDao.readCategoryOrder(x); 
-			l1.add(new OrderStaticsUser((Order) x, categoryList)); 
-			
-		}
-	
-		
-				
-				
-		
-		
-		//List<PreferencesStaticsUser> l2 = userDao.readPreferences(u); 
+		List<Order> orderList = userDao.readOrder(u); //lista di ordini effettuata dagli utenti ;
+		List<PreferencesStaticsUser> userPreference = userDao.readPreferences(u); 
 		UserStaticsPage p = new UserStaticsPage(); 
-		p.setOrderList(l1);
-		p.showUserStaticsPage(event);
+		p.showUserStaticsPage(event, orderList, userPreference);
 		
 	}
 }

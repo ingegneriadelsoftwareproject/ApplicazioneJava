@@ -2,26 +2,31 @@ package application.entity;
 
 public class Article {
 	
-	private String code;
-	private String categoryCode; 
+	private Integer code;
+	private Integer categoryCode; 
 	private String name; 
-	private String price;
+	private Float price;
 	private String description; 
 	private String dimension; 
-	private Float weight; 
+	private Integer weight; 
 	
 	
 	
-	public String getCode() {
+
+
+	
+	public Integer getCode() {
 		return code;
 	}
 
 
-	public void setCode(String code) {
+	public void setCode(Integer code) {
 		this.code = code;
 	}
 
-	
+
+
+
 	public String getName() {
 		return name;
 	}
@@ -32,22 +37,20 @@ public class Article {
 	}
 
 
-	public String getPrice() {
-		return price;
-	}
 
 
-	public void setPrice(String price) {
-		this.price = price;
-	}
 
 
-	public String getCategoryCode() {
+
+
+
+
+	public Integer getCategoryCode() {
 		return categoryCode;
 	}
 
 
-	public void setCategoryCode(String categoryCode) {
+	public void setCategoryCode(Integer categoryCode) {
 		this.categoryCode = categoryCode;
 	}
 
@@ -72,18 +75,31 @@ public class Article {
 	}
 
 
-	public Float getWeight() {
+
+
+
+	public Integer getWeight() {
 		return weight;
 	}
 
 
-	public void setWeight(Float weight) {
+	public void setWeight(Integer weight) {
 		this.weight = weight;
 	}
 
 
-	public Article(String code, String categoryCode, String name, String price, String description, String dimension,
-			Float weight) {
+	public Float getPrice() {
+		return price;
+	}
+
+
+	public void setPrice(Float price) {
+		this.price = price;
+	}
+
+
+	public Article(Integer code, Integer categoryCode, String name, Float price, String description, String dimension,
+			Integer weight) {
 		super();
 		this.code = code;
 		this.categoryCode = categoryCode;
@@ -93,6 +109,9 @@ public class Article {
 		this.dimension = dimension;
 		this.weight = weight;
 	}
+
+
+
 
 
 

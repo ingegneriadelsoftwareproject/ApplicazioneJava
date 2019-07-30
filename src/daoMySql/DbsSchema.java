@@ -2,6 +2,8 @@ package daoMySql;
 
 public final class DbsSchema {
 	
+	public static final String DBS_NAME = "ec17_db"; 
+	
 	
 	public static final String ADMINISTRATOR_TABLE = "administrator"; 
 	public static final String ADMINISTRATOR_USERNAME_COLUMN = "username"; 

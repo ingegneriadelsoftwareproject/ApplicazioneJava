@@ -109,9 +109,42 @@ public class UserDaoMySql extends UserDao {
 	@Override
 	public List<PreferencesStaticsUser> readPreferences(User u) {
 		List<PreferencesStaticsUser> l = new LinkedList<>(); 
+		String username = u.getUserName(); 
+		ResultSet rs = null; 
+		 
+		String statement = "SELECT " + DbsSchema.CATEGORY_TABLE +  "." + DbsSchema.CATEGORY_NAME_COLUMN + " AS CATEGORY, " + " SUM(" + DbsSchema.ARTICLE_PRICE_COLUMN + ")" + "AS TOTAL " +
+		"FROM " + DbsSchema.DBS_NAME + "." + DbsSchema.ORDER_TABLE + " JOIN " +  DbsSchema.DBS_NAME + "." + DbsSchema.ORDER_LIST_TABLE + " ON " + DbsSchema.DBS_NAME + "." + DbsSchema.ORDER_TABLE + "." + DbsSchema.ORDER_CODE_COLUMN + " = " + DbsSchema.DBS_NAME + "." + DbsSchema.ORDER_LIST_TABLE + "." + DbsSchema.ORDER_LIST_CODE_ORDER_COLUMN +
+		" JOIN " + DbsSchema.DBS_NAME + "." + DbsSchema.ARTICLE_TABLE + " ON " + DbsSchema.ARTICLE_TABLE + "." + DbsSchema.ARTICLE_CODE_COLUMN + " = " + DbsSchema.ORDER_LIST_TABLE+ "." + DbsSchema.ORDER_LIST_CODE_ARTICLE_COLUMN + " JOIN " + 
+		DbsSchema.CATEGORY_TABLE + " ON " + DbsSchema.ARTICLE_TABLE + "." + DbsSchema.ARTICLE_CATEGORYCODE_COLUMN + " = " + DbsSchema.CATEGORY_TABLE + "." + DbsSchema.CATEGORY_CODE_COLUMN +
+		" WHERE " + DbsSchema.ORDER_USERNAMEUSER_COLUMN + " = " +  "\"" + username + "\""; 
+		rs=DatabaseManagerMySql.getInstance().query(statement); 
+		try {
+			if(rs!= null) {
+				while(rs.next()) {
+					//System.out.println(rs);
+					//rs.first(); 
+					l.add(new PreferencesStaticsUser(rs.getString(1), rs.getFloat(2) ) );  
+				}
+			}
+		}
+		catch(SQLException e ) {
+			e.printStackTrace();
+		}
+		
+		
 		return l;
 	}
 
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	@Override
 	public List<Order> readOrder(User u) {
 		// TODO Auto-generated method stub

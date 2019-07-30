@@ -32,7 +32,7 @@
                                       </columns>
                                     </TableView>
                                     <PieChart fx:id="venditeChart" layoutX="239.0" layoutY="14.0" prefHeight="392.0" prefWidth="425.0" title="Statistiche di Vendita" />
-                                    <Text layoutX="26.0" layoutY="420.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Le statistiche  di vendita di questa categoria sono relative alle vendite fino ad oggi" wrappingWidth="319.13671875">
+                                    <Text layoutX="26.0" layoutY="420.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nella tabella vengono visualizzati i 10 articoli più venduti con relativo guadagno " wrappingWidth="319.13671875">
                                        <font>
                                           <Font name="System Bold Italic" size="15.0" />
                                        </font>

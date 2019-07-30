@@ -11,62 +11,62 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="567.0" prefWidth="644.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.boundary.ProductCategoryListPage">
    <children>
-      <Hyperlink fx:id="abbigliamentoLink" layoutX="78.0" layoutY="50.0" prefHeight="35.0" prefWidth="137.0" text="Abbigliamento" AnchorPane.bottomAnchor="482.0" AnchorPane.leftAnchor="75.0" AnchorPane.rightAnchor="429.0" AnchorPane.topAnchor="50.0">
+      <Hyperlink fx:id="abbigliamentoLink" layoutX="78.0" layoutY="50.0" onAction="#abbigliamentoLinkCliccked" prefHeight="35.0" prefWidth="137.0" text="Abbigliamento" AnchorPane.bottomAnchor="482.0" AnchorPane.leftAnchor="75.0" AnchorPane.rightAnchor="429.0" AnchorPane.topAnchor="50.0">
          <font>
             <Font size="18.0" />
          </font>
       </Hyperlink>
-      <Hyperlink fx:id="alimentariLink" layoutX="68.0" layoutY="78.0" prefHeight="35.0" prefWidth="262.0" text="Alimentari e cura della casa " AnchorPane.leftAnchor="75.0" AnchorPane.rightAnchor="307.0" AnchorPane.topAnchor="15.0">
+      <Hyperlink fx:id="alimentariLink" layoutX="68.0" layoutY="78.0" onAction="#alimentariLinkCliccked" prefHeight="35.0" prefWidth="262.0" text="Alimentari e cura della casa " AnchorPane.leftAnchor="75.0" AnchorPane.rightAnchor="307.0" AnchorPane.topAnchor="15.0">
          <font>
             <Font size="18.0" />
          </font>
       </Hyperlink>
-      <Hyperlink fx:id="autoMotoLink" layoutX="72.0" layoutY="81.0" text="Auto e Moto" AnchorPane.leftAnchor="72.0" AnchorPane.topAnchor="81.0">
+      <Hyperlink fx:id="autoMotoLink" layoutX="72.0" layoutY="81.0" onAction="#autoMotoLinkCliccked" text="Auto e Moto" AnchorPane.leftAnchor="72.0" AnchorPane.topAnchor="81.0">
          <font>
             <Font size="18.0" />
          </font>
       </Hyperlink>
-      <Hyperlink fx:id="casaCucinaLink" layoutX="70.0" layoutY="115.0" text="Casa e Cucina" AnchorPane.leftAnchor="70.0" AnchorPane.topAnchor="115.0">
+      <Hyperlink fx:id="casaCucinaLink" layoutX="70.0" layoutY="115.0" onAction="#casaCucinaLinkCliccked" text="Casa e Cucina" AnchorPane.leftAnchor="70.0" AnchorPane.topAnchor="115.0">
          <font>
             <Font size="18.0" />
          </font>
       </Hyperlink>
-      <Hyperlink fx:id="elettronicaLink" layoutX="84.0" layoutY="150.0" text="Elettronica" AnchorPane.leftAnchor="75.0">
+      <Hyperlink fx:id="elettronicaLink" layoutX="84.0" layoutY="150.0" onAction="#elettronicaLinkCliccked" text="Elettronica" AnchorPane.leftAnchor="75.0">
          <font>
             <Font size="18.0" />
          </font>
       </Hyperlink>
-      <Hyperlink fx:id="faiDaTeLink" layoutX="75.0" layoutY="185.0" text="Fai da te" AnchorPane.leftAnchor="75.0">
+      <Hyperlink fx:id="faiDaTeLink" layoutX="75.0" layoutY="185.0" onAction="#faiDaTeLinkCliccked" text="Fai da te" AnchorPane.leftAnchor="75.0">
          <font>
             <Font size="18.0" />
          </font>
       </Hyperlink>
-      <Hyperlink fx:id="giardinoLink" layoutX="83.0" layoutY="220.0" text="Giardino" AnchorPane.leftAnchor="75.0">
+      <Hyperlink fx:id="giardinoLink" layoutX="83.0" layoutY="220.0" onAction="#giardinoLinkCliccked" text="Giardino" AnchorPane.leftAnchor="75.0">
          <font>
             <Font size="18.0" />
          </font>
       </Hyperlink>
-      <Hyperlink fx:id="gioielliLink" layoutX="75.0" layoutY="255.0" text="Gioielli" AnchorPane.leftAnchor="75.0">
+      <Hyperlink fx:id="gioielliLink" layoutX="75.0" layoutY="255.0" onAction="#gioielliLinkCliccked" text="Gioielli" AnchorPane.leftAnchor="75.0">
          <font>
             <Font size="18.0" />
          </font>
       </Hyperlink>
-      <Hyperlink fx:id="informaticaLink" layoutX="72.0" layoutY="290.0" text="Informatica" AnchorPane.leftAnchor="75.0">
+      <Hyperlink fx:id="informaticaLink" layoutX="72.0" layoutY="290.0" onAction="#informaticaLinkCliccked" text="Informatica" AnchorPane.leftAnchor="75.0">
          <font>
             <Font size="18.0" />
          </font>
       </Hyperlink>
-      <Hyperlink fx:id="videogiochiLink" layoutX="79.0" layoutY="325.0" text="Videogiochi" AnchorPane.leftAnchor="75.0">
+      <Hyperlink fx:id="videogiochiLink" layoutX="79.0" layoutY="325.0" onAction="#videoGiochiLinkCliccked" text="Videogiochi" AnchorPane.leftAnchor="75.0">
          <font>
             <Font size="18.0" />
          </font>
       </Hyperlink>
-      <Hyperlink fx:id="sportLink" layoutX="81.0" layoutY="360.0" text="Sport" AnchorPane.leftAnchor="75.0">
+      <Hyperlink fx:id="sportLink" layoutX="81.0" layoutY="360.0" onAction="#sportLinkCliccked" text="Sport" AnchorPane.leftAnchor="75.0">
          <font>
             <Font size="18.0" />
          </font>
       </Hyperlink>
-      <Hyperlink fx:id="scarpeBorseLink" layoutX="81.0" layoutY="395.0" text="Scarpe e Borse" AnchorPane.leftAnchor="75.0">
+      <Hyperlink fx:id="scarpeBorseLink" layoutX="81.0" layoutY="395.0" onAction="#scarpeBorseLinkCliccked" text="Scarpe e Borse" AnchorPane.leftAnchor="75.0">
          <font>
             <Font size="18.0" />
          </font>

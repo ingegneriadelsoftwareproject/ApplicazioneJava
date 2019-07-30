@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="493.0" prefWidth="883.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.boundary.OrderStaticsPage">
+   <children>
+      <VBox prefHeight="400.0" prefWidth="640.0">
+        <children>
+          <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="483.0" prefWidth="757.0" VBox.vgrow="ALWAYS">
+            <children>
+                  <Label layoutX="67.0" layoutY="39.0" text="Ordine #">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="orderNumCode" layoutX="168.0" layoutY="39.0">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <TableView fx:id="articleTable" layoutX="14.0" layoutY="69.0" prefHeight="414.0" prefWidth="859.0">
+                    <columns>
+                      <TableColumn fx:id="codeColumn" prefWidth="93.0" text="Codice Articolo" />
+                      <TableColumn fx:id="categoryColumn" prefWidth="111.0" text="Codice Categoria" />
+                        <TableColumn fx:id="prezzoColumn" prefWidth="63.0" text="Prezzo" />
+                        <TableColumn fx:id="descColumn" prefWidth="235.0" text="Descrizione" />
+                        <TableColumn fx:id="dimColumn" prefWidth="70.0" text="dimensione" />
+                        <TableColumn fx:id="pesoColumn" prefWidth="76.0" text="peso" />
+                        <TableColumn fx:id="nameColumn" prefWidth="210.0" text="nome" />
+                    </columns>
+                  </TableView>
+            </children>
+          </AnchorPane>
+        </children>
+      </VBox>
+   </children>
+</AnchorPane>
