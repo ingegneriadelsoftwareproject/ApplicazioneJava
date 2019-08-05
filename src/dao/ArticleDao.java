@@ -5,7 +5,6 @@ import java.util.List;
 import application.entity.Article;
 import application.entity.ArticleProfit;
 import application.entity.Category;
-import application.entity.Order;
 
 public abstract class ArticleDao {
 	

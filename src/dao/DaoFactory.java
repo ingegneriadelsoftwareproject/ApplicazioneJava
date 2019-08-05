@@ -13,6 +13,7 @@ public abstract class DaoFactory {
 	public abstract CategoryDao getCategoryDao(); 
 	public abstract DatabaseManager getDatabaseManager(); 
 	public abstract AdministratorDao getAdministratorDao(); 
+	public abstract OrderDao getOrderDao(); 
 	
 
 }

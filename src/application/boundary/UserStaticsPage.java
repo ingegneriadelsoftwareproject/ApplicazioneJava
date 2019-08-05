@@ -1,37 +1,33 @@
 package application.boundary;
 
 import java.util.Date;
-import java.util.LinkedList;
+
+
 import java.util.List;
 
 import application.controller.OrderListController;
-import application.entity.Category;
+
 import application.entity.Order;
-import application.entity.OrderStaticsUser;
 import application.entity.PreferencesStaticsUser;
-import application.entity.User;
-import application.entity.UserPreferences;
-import javafx.beans.property.ObjectProperty;
+
 import javafx.collections.FXCollections;
-import javafx.collections.ListChangeListener;
 import javafx.collections.ObservableList;
-import javafx.collections.ListChangeListener.Change;
+
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.Node;
+
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.chart.PieChart;
 import javafx.scene.chart.PieChart.Data;
 import javafx.scene.control.Tab;
-import javafx.scene.control.TableCell;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
-import javafx.util.Callback;
+
 /**
  * pagina che visualizza le statistiche su un utente
  * in questa pagina viene visualizzata la lista degli ordini e le preferenze di acquisto dell'utente

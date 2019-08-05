@@ -5,6 +5,7 @@ import dao.ArticleDao;
 import dao.CategoryDao;
 import dao.DaoFactory;
 import dao.DatabaseManager;
+import dao.OrderDao;
 import dao.UserDao;
 
 public class DaoFactoryMySql extends DaoFactory{
@@ -37,6 +38,12 @@ public class DaoFactoryMySql extends DaoFactory{
 	public AdministratorDao getAdministratorDao() {
 		// TODO Auto-generated method stub
 		return new AdministratorDaoMySql();
+	}
+
+	@Override
+	public OrderDao getOrderDao() {
+		// TODO Auto-generated method stub
+		return new OrderDaoMySql();
 	}
 	
 

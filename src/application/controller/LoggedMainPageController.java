@@ -5,7 +5,6 @@ package application.controller;
 import application.boundary.FindUserPage;
 import application.boundary.MainPage;
 import application.boundary.ProductCategoryListPage;
-import application.boundary.StaticsProductPage;
 import javafx.event.ActionEvent;
 
 public class LoggedMainPageController {

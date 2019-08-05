@@ -31,7 +31,7 @@ public class DatabaseManagerMySql implements DatabaseManager {
 			try{                 
 				conn = DriverManager.getConnection(connectionString);             
 				}catch(SQLException sqlex){                 
-					System.out.println("Connessione fallita!");                              
+					System.out.println("Connessione fallita!");
 					}            
 			DatabaseManagerMySql.connection = conn;         
 		}

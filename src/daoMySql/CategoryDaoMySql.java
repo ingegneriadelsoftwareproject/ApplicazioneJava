@@ -7,7 +7,6 @@ import java.util.List;
 
 import application.entity.Category;
 import application.entity.Order;
-import application.entity.User;
 import dao.CategoryDao;
 
 

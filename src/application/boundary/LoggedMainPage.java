@@ -1,13 +1,11 @@
 package application.boundary;
 
-import java.text.DateFormat;
+
 
 import java.text.ParseException;
-import java.util.LinkedList;
-import java.util.Locale;
+
 
 import application.controller.LoggedMainPageController;
-import application.entity.User;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -50,6 +48,8 @@ public class LoggedMainPage {
     	LoggedMainPageController p = new LoggedMainPageController(); 
     	p.logoutLabelPressed(event);
     	((Node)(event.getSource())).getScene().getWindow().hide();
+
+    	
     	
 
     }

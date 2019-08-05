@@ -1,5 +1,7 @@
 package application.boundary;
 
+import java.io.IOException;
+
 import application.controller.LoginPageController;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -23,7 +25,7 @@ public class LoginPage {
     private Button loginButton;
 
     @FXML
-    void loginButtonControl(ActionEvent event){
+    void loginButtonControl(ActionEvent event) throws IOException{
     	
     	String userName = nomeTextField.getText().toString(); 
     	String password = passwordTextField.getText().toString(); 

@@ -46,7 +46,7 @@ public abstract class UserDao {
 		 * @param u
 		 * @return
 		 */
-		public abstract List<OrderStaticsUser> readOrderStatics(User u );
+		//public abstract List<OrderStaticsUser> readOrderStatics(User u );
 		/**
 		 * dato uno user legge le statistiche relative alle preferenze di quell'utente 
 		 * @param u

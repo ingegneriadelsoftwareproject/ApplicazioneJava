@@ -1,23 +1,18 @@
 package application.controller;
 
-import java.util.LinkedList;
+
 import java.util.List;
 
 import application.boundary.DeleteSuccesPage;
 import application.boundary.UserListPage;
 import application.boundary.UserPage;
 import application.boundary.UserStaticsPage;
-import application.entity.Category;
 import application.entity.Order;
-import application.entity.OrderStaticsUser;
 import application.entity.PreferencesStaticsUser;
 import application.entity.User;
-import dao.CategoryDao;
 import dao.UserDao;
 import daoMySql.DaoFactoryMySql;
 import javafx.event.ActionEvent;
-import javafx.scene.Node;
-import javafx.scene.control.TableView;
 import javafx.scene.input.MouseEvent;
 
 public class UserPageController {

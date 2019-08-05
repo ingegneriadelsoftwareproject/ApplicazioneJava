@@ -1,6 +1,5 @@
 package application.entity;
 
-import javafx.scene.chart.PieChart;
 
 /**
  * classe per settare i valori della table view sulle preferenze dell'utente

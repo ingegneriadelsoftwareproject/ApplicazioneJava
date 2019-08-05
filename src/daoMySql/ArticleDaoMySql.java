@@ -8,7 +8,6 @@ import java.util.List;
 import application.entity.Article;
 import application.entity.ArticleProfit;
 import application.entity.Category;
-import application.entity.Order;
 import dao.ArticleDao;
 
 public class ArticleDaoMySql extends ArticleDao {

@@ -2,13 +2,13 @@ package daoMySql;
 
 import java.sql.ResultSet;
 
+
 import java.sql.SQLException;
 import java.time.LocalDate;
 import java.util.LinkedList;
 import java.util.List;
 
 import application.entity.Order;
-import application.entity.OrderStaticsUser;
 import application.entity.PreferencesStaticsUser;
 import application.entity.User;
 import dao.UserDao;
@@ -99,12 +99,6 @@ public class UserDaoMySql extends UserDao {
 		
 	}
 
-	@Override
-	public List<OrderStaticsUser> readOrderStatics(User u) {
-		// TODO Auto-generated method stub
-		List<OrderStaticsUser> l = new LinkedList<>(); 
-		return l;
-	}
 
 	@Override
 	public List<PreferencesStaticsUser> readPreferences(User u) {

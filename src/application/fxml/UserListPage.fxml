@@ -24,7 +24,7 @@
                         <Font name="System Bold" size="18.0" />
                      </font>
                   </Button>
-                  <Text layoutX="33.0" layoutY="354.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cliccare sul tasto indietro per ritornare alla pagina di ricerca">
+                  <Text layoutX="33.0" layoutY="354.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cliccare sul tasto indietro per ritornare alla pagina principale">
                      <font>
                         <Font name="System Bold Italic" size="15.0" />
                      </font>

@@ -1,7 +1,6 @@
 package application.boundary;
 
 import java.util.List;
-import application.entity.Article;
 import application.entity.ArticleCategoryName;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;

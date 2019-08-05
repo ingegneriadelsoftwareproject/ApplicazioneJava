@@ -68,7 +68,7 @@ public class ProductCategoryListPage {
 			s.setScene(scene);
 			s.setTitle("Product Category List Page");
 			s.show();
-			((Node)(event.getSource())).getScene().getWindow().hide();
+			//((Node)(event.getSource())).getScene().getWindow().hide();
 			
 			
 		} catch(Exception e) {

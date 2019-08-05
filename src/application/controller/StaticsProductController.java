@@ -7,6 +7,7 @@ import application.boundary.StaticsProductPage;
 import dao.ArticleDao;
 import dao.CategoryDao;
 import dao.DaoFactory;
+import dao.OrderDao;
 import javafx.event.ActionEvent;
 import application.entity.*;
 
@@ -17,10 +18,14 @@ public class StaticsProductController {
 		StaticsProductPage p = new StaticsProductPage();
 		CategoryDao categoryDao = DaoFactory.getIstance().getCategoryDao(); 
 		Category category = categoryDao.readCategoryByName(linkName);
-		List<ArticleProfit> l ; 
+		List<ArticleProfit> articleCategoryProfit ; 
+		List<VenditeMensili> venditeMensili; 
 		ArticleDao articleDao = DaoFactory.getIstance().getArticleDao(); 
-		l= articleDao.readBestSellerArticle(category); 
-		p.showStaticsProductPage(event, l);
+		OrderDao orderDao = DaoFactory.getIstance().getOrderDao(); 
+		venditeMensili = orderDao.readVenditeMensili(linkName); 
+		articleCategoryProfit = articleDao.readBestSellerArticle(category); 
+		System.out.println(venditeMensili.isEmpty());
+		p.showStaticsProductPage(event, articleCategoryProfit, venditeMensili);
 		
 	}
 	
