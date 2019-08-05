@@ -1,17 +1,20 @@
 package application.boundary;
 
 import java.net.URL;
+
 import java.time.LocalDate;
 import java.util.ResourceBundle;
 
 import application.controller.FindUserController;
-
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.ComboBox;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.Label;
 import javafx.scene.control.RadioButton;
@@ -38,7 +41,7 @@ public class FindUserPage {
     private RadioButton dataDiNascitaRadioBox;
 
     @FXML
-    private DatePicker data;
+    private ComboBox<Integer> annoNascitaComboBox;
     
     @FXML
     private Label datalabel;
@@ -56,8 +59,8 @@ public class FindUserPage {
     	FindUserController p = new FindUserController();  
     	String username= usernameTextField.getText();
     	boolean radioBox = dataDiNascitaRadioBox.isSelected(); 
-    	LocalDate userdata = data.getValue();  
-    	p.findUserButtonPressed(event, username, userdata, radioBox);
+    	Integer anno = annoNascitaComboBox.getValue();  
+    	p.findUserButtonPressed(event, username, anno , radioBox);
     	
     	
     }
@@ -73,7 +76,7 @@ public class FindUserPage {
 			s.setScene(scene);
 			s.setTitle("Find User Page");
 			FindUserPage p = loader.getController(); 
-			//p.initData(l);
+			p.initData();
 			s.show();
 		
 			
@@ -84,7 +87,13 @@ public class FindUserPage {
     }
     
     public void initData() {
-    
+    	ObservableList <Integer> l = FXCollections.observableArrayList();  
+    	Integer i = 0; 
+    	for (i = 1980 ; i<2019; i++) {
+    		l.add(i); 
+    	}
+    	annoNascitaComboBox.getItems().addAll(l); 
+    	
     }
     @FXML
     void initialize() {

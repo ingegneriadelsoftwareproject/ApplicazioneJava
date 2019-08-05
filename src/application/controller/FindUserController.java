@@ -14,43 +14,26 @@ public class FindUserController {
 	
 	
 	
-	public void findUserButtonPressed(ActionEvent event, String username, LocalDate birthData, boolean radioBox) {
+	public void findUserButtonPressed(ActionEvent event, String username, Integer annoNascita, boolean radioBox) {
 		
 		UserListPage p = new UserListPage(); 
 		UserDao users = DaoFactoryMySql.getIstance().getUserDao(); 
 		List <User> l; 
-		if(username.isEmpty() && radioBox == true ) {
-			l = users.readUsersOnlyBirthDate(birthData); 
+		if(radioBox == true && username.isEmpty() ) {
+			l = users.readUsersOnlyBirthDate(annoNascita); 
 		}
+		else if (radioBox == true && username.isEmpty() == false ){
+			
+			l = users.readUsersBirthDate(username, annoNascita); 
+		}	
 		else {
-			if(username.isEmpty() == false && radioBox== true) {
-				
-				l = users.readUsersBirthDate(username, birthData); 
-			}
-			else {
-				l = users.readUsersName(username); 
-			}
+			l = users.readUsersName(username); 
 		}
 			
 		p.setUserList(l);
 		p.showUserListPage(event);
 		
 	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 	
 	
 }

@@ -16,7 +16,7 @@ public abstract class UserDao {
 		 * @param birthData
 		 * @return
 		 */
-		public abstract List<User> readUsersBirthDate(String username, LocalDate birthData);
+		public abstract List<User> readUsersBirthDate(String username, Integer annoNascita);
 		/**
 		 * dato un username ritorna una lista di utenti corrispondente
 		 * @param username
@@ -28,7 +28,7 @@ public abstract class UserDao {
 		 * @param birthData
 		 * @return
 		 */
-		public abstract List<User> readUsersOnlyBirthDate(LocalDate birthData); 
+		public abstract List<User> readUsersOnlyBirthDate(Integer annoNascita); 
 		/**
 		 * dato un username elimina l'utente che ha quel username dal database
 		 * 

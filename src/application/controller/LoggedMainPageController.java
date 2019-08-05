@@ -2,6 +2,9 @@ package application.controller;
 
 
 
+import java.util.LinkedList;
+import java.util.List;
+
 import application.boundary.FindUserPage;
 import application.boundary.MainPage;
 import application.boundary.ProductCategoryListPage;
@@ -13,7 +16,7 @@ public class LoggedMainPageController {
 		public void findUserButtonPressed(ActionEvent event) {
 			
 			FindUserPage p = new FindUserPage();
-			p.showFindUserPage(event );
+			p.showFindUserPage(event);
 			
 		}
 		

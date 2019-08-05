@@ -17,12 +17,12 @@ import dao.UserDao;
 public class UserDaoMySql extends UserDao {
 
 	@Override
-	public List<User> readUsersBirthDate(String username, LocalDate birthData) {
+	public List<User> readUsersBirthDate(String username, Integer annoNascita) {
 		List<User> l = new LinkedList<>(); 
 		ResultSet rs = null; 
 		 
 		String statement = "SELECT * " + " FROM " + DbsSchema.USER_TABLE + " WHERE " + DbsSchema.USER_USERANAME_COLUMN
-				+ "=\"" + username + "\" AND " + DbsSchema.USER_BIRTHDATE_COLUMN + "=\"" + birthData.toString() + "\";";
+				+ "=\"" + username + "\" AND " +  "YEAR ( " + DbsSchema.USER_BIRTHDATE_COLUMN + ")" + "=\"" + annoNascita + "\";";
 		rs=DatabaseManagerMySql.getInstance().query(statement); 
 		try {
 			if(rs!= null) {
@@ -66,12 +66,12 @@ public class UserDaoMySql extends UserDao {
 	}
 
 	@Override
-	public List<User> readUsersOnlyBirthDate(LocalDate birthData) {
+	public List<User> readUsersOnlyBirthDate (Integer annoNascita) {
 		List<User> l = new LinkedList<>(); 
 		ResultSet rs = null; 
 		 
 		String statement = "SELECT * " + " FROM " + DbsSchema.USER_TABLE + " WHERE " 
-		+ DbsSchema.USER_BIRTHDATE_COLUMN + "=\"" + birthData.toString() + "\";";
+		+  "YEAR ( " + DbsSchema.USER_BIRTHDATE_COLUMN + ")" + "=\"" + annoNascita + "\";";
 		rs=DatabaseManagerMySql.getInstance().query(statement); 
 		try {
 			if(rs!= null) {
