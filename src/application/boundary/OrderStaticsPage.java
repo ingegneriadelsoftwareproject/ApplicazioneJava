@@ -52,7 +52,7 @@ import javafx.stage.Stage;
 	    public void showOrderStaticsPage(MouseEvent event, String orderCode, List<ArticleCategoryName> l2 ) {
 	     	try {
 				FXMLLoader loader = new FXMLLoader(); 
-				loader.setLocation(getClass().getResource("../fxml/OrderStaticsPage.fxml"));
+				loader.setLocation(getClass().getResource("/application/fxml/OrderStaticsPage.fxml"));
 				Parent root = loader.load();
 				Scene scene = new Scene(root);
 				Stage s = new Stage();

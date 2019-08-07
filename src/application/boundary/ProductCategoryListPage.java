@@ -61,7 +61,7 @@ public class ProductCategoryListPage {
     public void showProductCategoryListPage(ActionEvent event) {
     	try {
 			FXMLLoader loader = new FXMLLoader(); 
-			loader.setLocation(getClass().getResource("../fxml/ProductCategoryListPage.fxml"));
+			loader.setLocation(getClass().getResource("/application/fxml/ProductCategoryListPage.fxml"));
 			Parent root = loader.load();
 			Scene scene = new Scene(root);
 			Stage s = new Stage();

@@ -24,7 +24,7 @@ public class ArticleDaoMySql extends ArticleDao {
 		try {
 			if(rs != null ) {
 				while(rs.next()) {
-					//rs.first();
+					rs.first();
 					l.add(new Article(rs.getInt(DbsSchema.ARTICLE_CODE_COLUMN), rs.getInt(DbsSchema.ARTICLE_CATEGORYCODE_COLUMN), rs.getString(DbsSchema.ARTICLE_NAME_COLUMN), rs.getFloat(DbsSchema.ARTICLE_PRICE_COLUMN), rs.getString(DbsSchema.ARTICLE_DESCRIPTION_COLUMN),rs.getString(DbsSchema.ARTICLE_DIMENSION_COLUMN), rs.getInt(DbsSchema.ARTICLE_WEIGHT_COLUMN))); 
 				}
 			}
@@ -51,7 +51,7 @@ public class ArticleDaoMySql extends ArticleDao {
 		try {
 			if(rs != null ) {
 				while(rs.next()) {
-					//rs.first();
+					rs.first();
 					l.add(new ArticleProfit(rs.getString(DbsSchema.ARTICLE_NAME_COLUMN), rs.getFloat(2)));
 					
 				}

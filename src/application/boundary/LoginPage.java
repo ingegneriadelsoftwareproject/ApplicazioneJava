@@ -40,7 +40,7 @@ public class LoginPage {
     public void showLoginPage(ActionEvent event) {
     	try {
 			FXMLLoader loader = new FXMLLoader(); 
-			loader.setLocation(getClass().getResource("../fxml/LoginPage.fxml"));
+			loader.setLocation(getClass().getResource("/application/fxml/LoginPage.fxml"));
 			Parent root = loader.load();
 			Scene scene = new Scene(root);
 			Stage s = new Stage();

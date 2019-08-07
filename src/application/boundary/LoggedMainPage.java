@@ -66,7 +66,7 @@ public class LoggedMainPage {
       	try {
       			
       			FXMLLoader loader = new FXMLLoader(); 
-    			loader.setLocation(getClass().getResource("../fxml/LoggedMainPage.fxml"));
+    			loader.setLocation(getClass().getResource("/application/fxml/LoggedMainPage.fxml"));
     			Parent root = loader.load();
     			Scene scene = new Scene(root);
     			Stage s = new Stage();

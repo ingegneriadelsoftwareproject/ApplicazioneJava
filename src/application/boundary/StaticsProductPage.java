@@ -55,14 +55,12 @@ public class StaticsProductPage {
     public void showStaticsProductPage(ActionEvent event, List<ArticleProfit> l, List<VenditeMensili> l2 ) {
     	try {
 			FXMLLoader loader = new FXMLLoader(); 
-			loader.setLocation(getClass().getResource("../fxml/StaticsProductPage.fxml"));
+			loader.setLocation(getClass().getResource("/application/fxml/StaticsProductPage.fxml"));
 			Parent root = loader.load();
 			Scene scene = new Scene(root);
 			Stage s = new Stage();
 			s.setScene(scene);
 			s.setTitle("Statics Product Page");
-			StaticsProductPage p = loader.getController(); 
-			p.InitData(l, l2);
 			s.show();
 	
 			
@@ -72,29 +70,6 @@ public class StaticsProductPage {
 		}
     }
     
-    
-    public void InitData(List<ArticleProfit> l , List<VenditeMensili> l2) {
-    	
-    	articoloColumn.setCellValueFactory(new PropertyValueFactory<ArticleProfit,String>("articleName"));
-    	importoColumn.setCellValueFactory(new PropertyValueFactory<ArticleProfit,Float>("profit"));
-    	venditeTable.setColumnResizePolicy(TableView.CONSTRAINED_RESIZE_POLICY); 
-    	ObservableList<ArticleProfit> observableArticleProfitList = FXCollections.observableArrayList(l);
-    	venditeTable.setItems(observableArticleProfitList);
-    	ObservableList<Data> pieChartObservableList = FXCollections.observableArrayList(); 
-    	for(ArticleProfit x : l ) {
-    		PieChart.Data data = new Data(x.getArticleName(), x.getProfit()); 
-    		pieChartObservableList.add(data); 
-    	}
-    	venditeChart.setData(pieChartObservableList);
-    	XYChart.Series serie = new XYChart.Series<>(); 
-    	int i = 0 ; 
-    	for ( i = 0; i<l2.size(); i++ ) {
-    		
-    		serie.getData().add(new XYChart.Data<>( l2.get(i).getMese().toString(), l2.get(i).getImporto() )); 
-    	}
-    
-    	venditeMensiliChart.getData().add(serie); 
-    	
-    }
+
 
 }

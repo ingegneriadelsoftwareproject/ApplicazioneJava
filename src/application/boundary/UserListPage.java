@@ -86,7 +86,7 @@ public class UserListPage   {
     public void showUserListPage(ActionEvent event) {
      	try {
 			FXMLLoader loader = new FXMLLoader(); 
-			loader.setLocation(getClass().getResource("../fxml/UserListPage.fxml"));
+			loader.setLocation(getClass().getResource("/application/fxml/UserListPage.fxml"));
 			Parent root = loader.load();
 			Scene scene = new Scene(root);
 			Stage s = new Stage();

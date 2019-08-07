@@ -24,7 +24,7 @@ public class LoginFailledNoConnessione {
     public void showLoginFailledNoCredenziali(ActionEvent event) {
      	try {
 			FXMLLoader loader = new FXMLLoader(); 
-			loader.setLocation(getClass().getResource("../fxml/LoginFailledNoConnessione.fxml"));
+			loader.setLocation(getClass().getResource("/application/fxml/LoginFailledNoConnessione.fxml"));
 			Parent root = loader.load();
 			Scene scene = new Scene(root);
 			Stage s = new Stage();

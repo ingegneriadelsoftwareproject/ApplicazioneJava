@@ -28,7 +28,7 @@ public class LoginOkPage {
     public void showLoginOkPage(ActionEvent event) {
     	try {
 			FXMLLoader loader = new FXMLLoader(); 
-			loader.setLocation(getClass().getResource("../fxml/LoginOkPage.fxml"));
+			loader.setLocation(getClass().getResource("/application/fxml/LoginOkPage.fxml"));
 			Parent root = loader.load();
 			Scene scene = new Scene(root);
 			Stage s = new Stage();

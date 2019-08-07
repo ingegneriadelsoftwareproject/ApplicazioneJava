@@ -69,7 +69,7 @@ public class FindUserPage {
     public void showFindUserPage(ActionEvent event) {
      	try {
 			FXMLLoader loader = new FXMLLoader(); 
-			loader.setLocation(getClass().getResource("../fxml/FindUserPage.fxml"));
+			loader.setLocation(getClass().getResource("/application/fxml/FindUserPage.fxml"));
 			Parent root = loader.load();
 			Scene scene = new Scene(root);
 			Stage s = new Stage();

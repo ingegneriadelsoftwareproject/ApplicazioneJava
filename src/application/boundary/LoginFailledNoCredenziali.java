@@ -29,7 +29,7 @@ public class LoginFailledNoCredenziali {
     public void showLoginFailledNoCredenziali(ActionEvent event) {
      	try {
 			FXMLLoader loader = new FXMLLoader(); 
-			loader.setLocation(getClass().getResource("../fxml/LoginFailledNoCredenziali.fxml"));
+			loader.setLocation(getClass().getResource("/application/fxml/LoginFailledNoCredenziali.fxml"));
 			Parent root = loader.load();
 			Scene scene = new Scene(root);
 			Stage s = new Stage();

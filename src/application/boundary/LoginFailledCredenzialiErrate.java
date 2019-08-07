@@ -31,7 +31,7 @@ public class LoginFailledCredenzialiErrate {
     public void showLoginFailledCredenzialiErrate(ActionEvent event) {
     	try {
 			FXMLLoader loader = new FXMLLoader(); 
-			loader.setLocation(getClass().getResource("../fxml/LoginFailledCredenzialiErrate.fxml"));
+			loader.setLocation(getClass().getResource("/application/fxml/LoginFailledCredenzialiErrate.fxml"));
 			Parent root = loader.load();
 			Scene scene = new Scene(root);
 			Stage s = new Stage();
